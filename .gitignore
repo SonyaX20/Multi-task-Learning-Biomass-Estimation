@@ -1,2 +1,6 @@
 # Ignore train_agbm folder and all its contents
-biomassters/src/train_agbm/
+biomassters/
+test_dataset/openagrar_derivate_00057802
+treesat-ai/*.zip
+treesat-ai/src/s1
+**/.ipynb_checkpoints/

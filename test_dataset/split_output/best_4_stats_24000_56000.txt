@@ -1,0 +1,16 @@
+Window Statistics (Rank 4):
+Coordinates: (24000, 56000)
+Invalid pixel percentage: 16.89%
+
+Species Distribution:
+Birch: 100,770 pixels (2.52%)
+Beech: 1,904,261 pixels (47.61%)
+Douglas fir: 288,902 pixels (7.22%)
+Oak: 290,557 pixels (7.26%)
+Alder: 6,118 pixels (0.15%)
+Spruce: 491,759 pixels (12.29%)
+Pine: 123,190 pixels (3.08%)
+Larch: 95,607 pixels (2.39%)
+Fir: 7,680 pixels (0.19%)
+ODH: 13,324 pixels (0.33%)
+ODL: 2,061 pixels (0.05%)
