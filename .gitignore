@@ -1,0 +1,5 @@
+# Ignore all .tif files but keep directories
+*.tif
+
+# Keep directory structure by adding .gitkeep files
+!**/.gitkeep
