@@ -1,0 +1,544 @@
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python get_dtm_dsm_treesat_links.py --type dtm --resolution 60
+Processing DTM data at 60 m resolution...
+  Big tiles (DGM1/DOM1): /Users/siyux1927/local/thesis0926/data/lgln-opengeodata/lgln-opengeodata-dgm1.geojson
+  TreeSat grid: /Users/siyux1927/local/thesis0926/data/treesat_ori/geojson/bb_60m.GeoJSON
+  Output JSON: /Users/siyux1927/local/thesis0926/data-processing/gen-chm/query_result_60m/dtm1_links_60m.json
+Reading GeoJSON files...
+  DGM1 polygons: 49573
+  TreeSat grid polygons (60 m): 50381
+Building spatial index over big tiles...
+Processing spatial intersections (bounding-box overlap)...
+TreeSat cells: 100%|█████████████████████████████████████████████████| 50381/50381 [00:00<00:00, 52908.23it/s]
+  TreeSat grids assigned to at least one DGM1 tile: 50381 / 50381
+  Number of DGM1 tiles with TreeSat coverage: 6210
+  Total TreeSat polygons covered: 50381
+  Coverage ratio: 100.0% of 50381 TreeSat cells
+  Total DGM1-TreeSat intersections: 57037
+  Output saved to: /Users/siyux1927/local/thesis0926/data-processing/gen-chm/query_result_60m/dtm1_links_60m.json
+
+dsm and dtm have same spatial features, there are in total 49573 tiles, where 6210 tiles with TreeSat coverage, and coverage ratio with treesatai cells is 100%, covering all treesatai data.
+
+when Single-tile treesat samples: 44191 (87.7%)
+    Multi-tile treesat samples (require mosaic): 6190 (12.3%)
+    DTM tile count distribution:
+      1 tile(s): 44191 treesat samples
+      2 tile(s): 5957 treesat samples
+      4 tile(s): 233 treesat samples
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python get_dtm_dsm_treesat_links.py --type dtm --resolution 60
+Processing DTM data at 60 m resolution...
+  Big tiles (DGM1/DOM1): /Users/siyux1927/local/thesis0926/data/lgln-opengeodata/lgln-opengeodata-dgm1.geojson
+  TreeSat grid: /Users/siyux1927/local/thesis0926/data/treesat_ori/geojson/bb_60m.GeoJSON
+  Output JSON: /Users/siyux1927/local/thesis0926/data/query_result/dtm1_links_60m.json
+Reading GeoJSON files...
+  DGM1 polygons: 49573
+  TreeSat grid polygons (60 m): 50381
+Building spatial index over big tiles...
+Processing spatial intersections (bounding-box overlap)...
+TreeSat cells: 100%|█████████████████████████████████████████████████| 50381/50381 [00:00<00:00, 53672.92it/s]
+  TreeSat grids assigned to at least one DGM1 tile: 50381 / 50381
+  Number of DGM1 tiles with TreeSat coverage: 6210
+  Total TreeSat polygons covered: 50381
+  Coverage ratio: 100.0% of 50381 TreeSat cells
+  Total DGM1-TreeSat intersections: 57037
+  Output saved to: /Users/siyux1927/local/thesis0926/data/query_result/dtm1_links_60m.json
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python get_dtm_dsm_treesat_links.py --type dtm --resolution 60
+Processing DTM data at 60 m resolution...
+  Big tiles (DGM1/DOM1): /Users/siyux1927/local/thesis0926/data/lgln-opengeodata/lgln-opengeodata-dgm1.geojson
+  TreeSat grid: /Users/siyux1927/local/thesis0926/data/treesat_ori/geojson/bb_60m.GeoJSON
+  Output JSON: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dtm1_links_60m.json
+Reading GeoJSON files...
+  DGM1 polygons: 49573
+  TreeSat grid polygons (60 m): 50381
+Building spatial index over big tiles...
+Processing spatial intersections (bounding-box overlap)...
+TreeSat cells: 100%|█████████████████████████████████████████████████| 50381/50381 [00:00<00:00, 53596.52it/s]
+  TreeSat grids assigned to at least one DGM1 tile: 50381 / 50381
+  Number of DGM1 tiles with TreeSat coverage: 6210
+  Total TreeSat polygons covered: 50381
+  Coverage ratio: 100.0% of 50381 TreeSat cells
+  Total DGM1-TreeSat intersections: 57037
+  Output saved to: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dtm1_links_60m.json
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python get_dtm_dsm_treesat_links.py --type dtm --resolution 200
+Processing DTM data at 200 m resolution...
+  Big tiles (DGM1/DOM1): /Users/siyux1927/local/thesis0926/data/lgln-opengeodata/lgln-opengeodata-dgm1.geojson
+  TreeSat grid: /Users/siyux1927/local/thesis0926/data/treesat_ori/geojson/bb_200m.GeoJSON
+  Output JSON: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dtm1_links_200m.json
+Reading GeoJSON files...
+  DGM1 polygons: 49573
+  TreeSat grid polygons (200 m): 50381
+Building spatial index over big tiles...
+Processing spatial intersections (bounding-box overlap)...
+TreeSat cells: 100%|█████████████████████████████████████████████████| 50381/50381 [00:00<00:00, 52665.35it/s]
+  TreeSat grids assigned to at least one DGM1 tile: 50381 / 50381
+  Number of DGM1 tiles with TreeSat coverage: 6810
+  Total TreeSat polygons covered: 50381
+  Coverage ratio: 100.0% of 50381 TreeSat cells
+  Output saved to: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dtm1_links_200m.json
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python get_dtm_dsm_treesat_links.py --type dsm --resolution 60
+Processing DSM data at 60 m resolution...
+  Big tiles (DGM1/DOM1): /Users/siyux1927/local/thesis0926/data/lgln-opengeodata/lgln-opengeodata-dom1.geojson
+  TreeSat grid: /Users/siyux1927/local/thesis0926/data/treesat_ori/geojson/bb_60m.GeoJSON
+  Output JSON: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dsm1_links_60m.json
+Reading GeoJSON files...
+  DOM1 polygons: 49609
+  TreeSat grid polygons (60 m): 50381
+Building spatial index over big tiles...
+Processing spatial intersections (bounding-box overlap)...
+TreeSat cells: 100%|█████████████████████████████████████████████████| 50381/50381 [00:00<00:00, 52465.08it/s]
+  TreeSat grids assigned to at least one DOM1 tile: 50381 / 50381
+  Number of DOM1 tiles with TreeSat coverage: 6210
+  Total TreeSat polygons covered: 50381
+  Coverage ratio: 100.0% of 50381 TreeSat cells
+  Output saved to: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dsm1_links_60m.json
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python get_dtm_dsm_treesat_links.py --type dsm --resolution 200
+Processing DSM data at 200 m resolution...
+  Big tiles (DGM1/DOM1): /Users/siyux1927/local/thesis0926/data/lgln-opengeodata/lgln-opengeodata-dom1.geojson
+  TreeSat grid: /Users/siyux1927/local/thesis0926/data/treesat_ori/geojson/bb_200m.GeoJSON
+  Output JSON: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dsm1_links_200m.json
+Reading GeoJSON files...
+  DOM1 polygons: 49609
+  TreeSat grid polygons (200 m): 50381
+Building spatial index over big tiles...
+Processing spatial intersections (bounding-box overlap)...
+TreeSat cells: 100%|█████████████████████████████████████████████████| 50381/50381 [00:00<00:00, 52331.19it/s]
+  TreeSat grids assigned to at least one DOM1 tile: 50381 / 50381
+  Number of DOM1 tiles with TreeSat coverage: 6810
+  Total TreeSat polygons covered: 50381
+  Coverage ratio: 100.0% of 50381 TreeSat cells
+  Output saved to: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dsm1_links_200m.json
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python gen2_reverse_mapping.py --resolution 60
+Reversing tile_id->treesat mapping to treesat->tile_ids mapping...
+  Resolution: 60 m
+  DTM links: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dtm1_links_60m.json
+  DSM links: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dsm1_links_60m.json
+  Output:    /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/treesat_to_tiles_60m.json
+
+Loading dtm1 links...
+Loading dsm1 links...
+    DTM tiles: 6210
+    DSM tiles: 6210
+
+Processing DTM mappings...
+Processing DSM mappings...
+
+Combining DTM and DSM information...
+
+Saving to /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/treesat_to_tiles_60m.json...
+    Total unique treesat samples: 50381
+    Single-tile treesat samples: 44191 (87.7%)
+    Multi-tile treesat samples (require mosaic): 6190 (12.3%)
+    DTM tile count distribution:
+      1 tile(s): 44191 treesat samples
+      2 tile(s): 5957 treesat samples
+      4 tile(s): 233 treesat samples
+    DSM tile count distribution:
+      1 tile(s): 44191 treesat samples
+      2 tile(s): 5957 treesat samples
+      4 tile(s): 233 treesat samples
+
+Examples of treesat samples requiring mosaic (first 5):
+  Picea_abies_9_47041_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 325985724, 325995724
+  Betula_spec._1_15457_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 325465757, 325455757
+  Alnus_spec._4_14153_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 326095716, 326105716
+  Picea_abies_6_49271_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 325855749, 325855750
+  Pinus_sylvestris_4_297957_BI_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 326135889, 326125889
+
+Output saved to: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/treesat_to_tiles_60m.json
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python gen2_reverse_mapping.py --resolution 200 
+Reversing tile_id->treesat mapping to treesat->tile_ids mapping...
+  Resolution: 200 m
+  DTM links: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dtm1_links_200m.json
+  DSM links: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/dsm1_links_200m.json
+  Output:    /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/treesat_to_tiles_200m.json
+
+Loading dtm1 links...
+Loading dsm1 links...
+    DTM tiles: 6810
+    DSM tiles: 6810
+
+Processing DTM mappings...
+Processing DSM mappings...
+
+Combining DTM and DSM information...
+
+Saving to /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/treesat_to_tiles_200m.json...
+    Total unique treesat samples: 50381
+    Single-tile treesat samples: 32410 (64.3%)
+    Multi-tile treesat samples (require mosaic): 17971 (35.7%)
+    DTM tile count distribution:
+      1 tile(s): 32410 treesat samples
+      2 tile(s): 15904 treesat samples
+      3 tile(s): 4 treesat samples
+      4 tile(s): 2063 treesat samples
+    DSM tile count distribution:
+      1 tile(s): 32410 treesat samples
+      2 tile(s): 15904 treesat samples
+      3 tile(s): 4 treesat samples
+      4 tile(s): 2063 treesat samples
+
+Examples of treesat samples requiring mosaic (first 5):
+  Abies_alba_9_3647_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 324835940, 324825940
+  Quercus_robur_5_87675_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 325745724, 325745723
+  Quercus_robur_7_313402_BI_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 325965902, 325965901
+  Betula_spec._1_16523_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 325895720, 325895721
+  Cleared_0_24423_WEFL_NLF: 2 DTM tiles, 2 DSM tiles
+    DTM tile_ids: 324905841, 324895841
+
+Output saved to: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/treesat_to_tiles_200m.json
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python gen5_chm_reproj_maxpool_crop_stack.py --resolution 60 --stack
+Loading treesat mapping from: /Users/siyux1927/local/thesis0926/data-processing/dtm-dsm-treesat-links/treesat_to_tiles_60m.json
+  Loaded 50381 TreeSat entries
+Loading TreeSat templates from: /Users/siyux1927/local/thesis0926/data/treesatai_data/s1/60m
+  Loaded 50381 template rasters
+Indexing CHM tiles in: /Users/siyux1927/local/thesis0926/data/chm
+  Found 6810 CHM tiles
+Reproject+maxpool CHM (60m): 100%|██████████████████████████████████████| 50381/50381 [21:23<00:00, 39.27it/s]
+
+Reprojection + max-pooling complete:
+  Successful: 50381
+  Failed: 0
+  Missing template: 0
+  Missing CHM tiles: 0
+  Output directory: /Users/siyux1927/local/thesis0926/data/chm_60m
+Stacking CHM + S1: 100%|███████████████████████████████████████████████| 50381/50381 [03:05<00:00, 271.88it/s]
+
+Stacking complete:
+  Successful: 50381
+  Failed: 0
+  Output directory: /Users/siyux1927/local/thesis0926/data/chm_stacked_treesat_60m
+
+--- Band 0: VV ---
+NoData value: -9999
+Files with NoData: 26/50381 (0.05%)
+NoData pixels: 145/1813716 (0.0080%)
+Min: -31.2206
+Max: 22.7386
+Mean: -6.1682
+Std: 3.7119
+Percentile 1: -14.4780
+Percentile 2: -13.3651
+Percentile 5: -11.8630
+Percentile 95: 0.1584
+Percentile 98: 1.5013
+Percentile 99: 2.4194
+
+--- Band 1: VH ---
+NoData value: -9999
+Files with NoData: 8/50381 (0.02%)
+NoData pixels: 41/1813716 (0.0023%)
+Min: -49.7253
+Max: 21.9384
+Mean: -12.4136
+Std: 3.4816
+Percentile 1: -21.1704
+Percentile 2: -19.7949
+Percentile 5: -18.0329
+Percentile 95: -6.7274
+Percentile 98: -5.4673
+Percentile 99: -4.6139
+
+--- Band 2: VV/VH ---
+NoData value: -9999
+Files with NoData: 18/50381 (0.04%)
+NoData pixels: 104/1813716 (0.0057%)
+Min: -288.3494
+Max: 1259.1809
+Mean: 0.4752
+Std: 1.5550
+Percentile 1: -0.3573
+Percentile 2: -0.1944
+Percentile 5: -0.0178
+Percentile 95: 0.8942
+Percentile 98: 1.0129
+Percentile 99: 1.1020
+Plotting 1812535 values after filtering [-10, 10]
+
+--- Band 3: CHM ---
+NoData value: -9999
+Files with NoData: 0/50381 (0.00%)
+NoData pixels: 0/1813716 (0.0000%)
+Min: 0.0000
+Max: 41.1231
+Mean: 21.7850
+Std: 8.6651
+Percentile 1: 0.0000
+Percentile 2: 0.0000
+Percentile 5: 0.0530
+Percentile 95: 33.0900
+Percentile 98: 35.4890
+Percentile 99: 37.0690
+Plotting 1705100 values after removing zeros
+
+[1/3] Building area-filtered labels and stratified splits (60m labels)...
+Area-filtered labels and stratified splits saved to:
+/Users/siyux1927/local/thesis0926/data/treesatai_data/s1_60m_stratified/labels_train_filtered.json
+/Users/siyux1927/local/thesis0926/data/treesatai_data/s1_60m_stratified/labels_val_filtered.json
+/Users/siyux1927/local/thesis0926/data/treesatai_data/s1_60m_stratified/labels_test_filtered.json
+/Users/siyux1927/local/thesis0926/data/treesatai_data/s1_60m_stratified/classes.json
+/Users/siyux1927/local/thesis0926/data/treesatai_data/s1_60m_stratified/label_stats.json
+
+[2/3] Computing class weights (60m labels)...
+Class weights saved to: /Users/siyux1927/local/thesis0926/data/treesatai_data/s1_60m_stratified/class_weights.json
+Classes: ['Abies', 'Acer', 'Alnus', 'Betula', 'Cleared', 'Fagus', 'Fraxinus', 'Larix', 'Picea', 'Pinus', 'Populus', 'Prunus', 'Pseudotsuga', 'Quercus', 'Tilia']
+Raw counts: [1039, 2641, 2704, 2815, 4538, 8864, 2370, 3914, 8837, 9264, 450, 315, 3593, 9767, 191]
+Class frequencies:
+[0.01694888 0.04308179 0.04410949 0.0459202  0.07402695 0.14459561
+ 0.03866106 0.06384784 0.14415517 0.15112068 0.00734071 0.00513849
+ 0.05861146 0.15932596 0.00311572]
+Normalized inverse-frequency weights:
+[0.06725334 0.02645824 0.0258418  0.02482282 0.01539802 0.00788315
+ 0.02948364 0.01785289 0.00790723 0.00754277 0.1552805  0.22182929
+ 0.01944788 0.00715432 0.36584411]
+
+[3/3] Building numpy training arrays from stacked S1+CHM (60m)...
+Training arrays saved to: /Users/siyux1927/local/thesis0926/data/training-data-60m
+
+Preprocessing pipeline completed.
+
+@Dec.27
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python gen4_generate_chm.py 
+Found 6810 DSM/DTM pairs.
+Generating CHM:  32%|████████████████████████████▏                                                           | 2178/6810 [03:10<06:35, 11.70it/s]Warning: DSM still contains nodata after filling: 325205833.tif
+Generating CHM:  49%|██████████████████████████████████████████▊                                             | 3316/6810 [04:56<04:46, 12.19it/s]Warning: DSM still contains nodata after filling: 325455699.tif
+Generating CHM:  50%|███████████████████████████████████████████▋                                            | 3376/6810 [05:01<04:07, 13.89it/s]Warning: DSM still contains nodata after filling: 325465699.tif
+Generating CHM:  74%|█████████████████████████████████████████████████████████████████▌                      | 5070/6810 [07:35<02:07, 13.65it/s]Warning: DSM still contains nodata after filling: 325905724.tif
+Generating CHM:  93%|█████████████████████████████████████████████████████████████████████████████████▍      | 6301/6810 [09:28<00:43, 11.62it/s]Warning: DSM still contains nodata after filling: 326205902.tif
+Generating CHM:  98%|██████████████████████████████████████████████████████████████████████████████████████▏ | 6674/6810 [10:03<00:12, 11.14it/s]Warning: DSM still contains nodata after filling: 326385864.tif
+Generating CHM:  98%|██████████████████████████████████████████████████████████████████████████████████████▍ | 6688/6810 [10:05<00:11, 11.01it/s]Warning: DSM still contains nodata after filling: 326395864.tif
+Generating CHM: 100%|████████████████████████████████████████████████████████████████████████████████████████| 6810/6810 [10:16<00:00, 11.05it/s]
+
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python gen5_chm_reproj_maxpool_crop_stack.py --resolution 60 --gen_only
+Loading treesat mapping from: /Users/siyux1927/local/thesis0926/@data-processing/dtm-dsm-treesat-links/treesat_to_tiles_60m.json
+  Loaded 50381 TreeSat entries
+Loading TreeSat templates from: /Users/siyux1927/local/thesis0926/data/treesatai_data/s1/60m
+  Loaded 50381 template rasters
+Indexing CHM tiles in: /Users/siyux1927/local/thesis0926/data/chm_standard
+  Found 7460 CHM tiles
+Reproject+maxpool CHM (60m): 100%|█████████████████████████████████████████████████████████████████████████| 50381/50381 [24:44<00:00, 33.94it/s]
+
+Reprojection + max-pooling complete:
+  Successful: 50381
+  Failed: 0
+  Missing template: 0
+  Missing CHM tiles: 0
+  Output directory: /Users/siyux1927/local/thesis0926/data/chm_60m
+
+(before clipping to 0.1% and 99.9%)
+(new) siyux1927@SiyudeMacBook-Pro thesis0926 % python @data-processing/gen-chm/vis.py
+
+--- Band 0: VV ---
+NoData value: -9999
+Files with NoData: 26/50381 (0.05%)
+NoData pixels: 145/1813716 (0.0080%)
+Min: -31.2206
+Max: 22.7386
+Mean: -6.1682
+Std: 3.7119
+Percentile 0.1: -18.0383
+Percentile 1: -14.4780
+Percentile 2: -13.3651
+Percentile 5: -11.8630
+Percentile 95: 0.1584
+Percentile 98: 1.5013
+Percentile 99: 2.4194
+Percentile 99.9: 5.5330
+
+--- Band 1: VH ---
+NoData value: -9999
+Files with NoData: 8/50381 (0.02%)
+NoData pixels: 41/1813716 (0.0023%)
+Min: -49.7253
+Max: 21.9384
+Mean: -12.4136
+Std: 3.4816
+Percentile 0.1: -26.1871
+Percentile 1: -21.1704
+Percentile 2: -19.7949
+Percentile 5: -18.0329
+Percentile 95: -6.7274
+Percentile 98: -5.4673
+Percentile 99: -4.6139
+Percentile 99.9: -1.7555
+
+--- Band 2: VV/VH ---
+NoData value: -9999
+Files with NoData: 0/50381 (0.00%)
+NoData pixels: 0/1813716 (0.0000%)
+Min: -288.3494
+Max: 1259.1809
+Mean: 0.4752
+Std: 1.5549
+Percentile 0.1: -1.7393
+Percentile 1: -0.3573
+Percentile 2: -0.1944
+Percentile 5: -0.0178
+Percentile 95: 0.8942
+Percentile 98: 1.0129
+Percentile 99: 1.1020
+Percentile 99.9: 1.4362
+Plotting 1812639 values after filtering [-10, 10]
+
+--- Band 3: CHM ---
+NoData value: -9999
+Files with NoData: 0/50381 (0.00%)
+NoData pixels: 0/1813716 (0.0000%)
+Min: 0.0000
+Max: 177.2010
+Mean: 21.7917
+Std: 8.6801
+Percentile 0.1: 0.0000
+Percentile 1: 0.0000
+Percentile 2: 0.0000
+Percentile 5: 0.0540
+Percentile 95: 33.0940
+Percentile 98: 35.4980
+Percentile 99: 37.0840
+Percentile 99.9: 41.5983
+Plotting 1705217 values after removing zeros
+
+Histogram saved to /Users/siyux1927/local/thesis0926/@plots/data-insight/stacked_band_histograms_60m.png
+
+@Dec.28
+(new) siyux1927@SiyudeMacBook-Pro gen-chm % python gen5_chm_reproj_maxpool_crop_stack.py --resolution 60 --stack
+===== 1. Load mappings, templates, and CHM index =====
+Loading treesat mapping from: /Users/siyux1927/local/thesis0926/@data-processing/dtm-dsm-treesat-links/treesat_to_tiles_60m.json
+  Loaded 50381 TreeSat entries
+Loading TreeSat templates from: /Users/siyux1927/local/thesis0926/data/treesatai_data/s1/60m
+  Loaded 50381 template rasters
+Indexing CHM tiles in: /Users/siyux1927/local/thesis0926/data/chm_standard
+  Found 7460 CHM tiles
+===== 2. Prepare CHM output directory =====
+===== 3. Reproject CHM tiles to TreeSat grid =====
+Reproject+filter+reproject CHM (60m): 100%|█████████████████████████████████████████████████████████████████| 50381/50381 [39:06<00:00, 21.47it/s]
+
+Reprojection + filtering + resampling complete:
+  Successful: 50381
+  Failed: 0
+  Missing template: 0
+  Missing CHM tiles: 0
+  Output directory: /Users/siyux1927/local/thesis0926/data/chm_60m
+===== 4. Stack CHM with Sentinel-1 =====
+Stacking CHM + S1: 100%|███████████████████████████████████████████████████████████████████████████████████| 50381/50381 [03:05<00:00, 272.19it/s]
+
+Stacking complete:
+  Successful: 50381
+  Failed: 0
+  Output directory: /Users/siyux1927/local/thesis0926/data/stacked_treesat_60m
+
+(after)
+
+--- Band 0: VV ---
+NoData value: -9999
+Files with NoData: 26/50381 (0.05%)
+NoData pixels: 145/1813716 (0.0080%)
+Min: -18.0383
+Max: 5.5330
+Mean: -6.1680
+Std: 3.7010
+Percentile 0.1: -18.0383
+Percentile 1: -14.4780
+Percentile 2: -13.3651
+Percentile 5: -11.8630
+Percentile 95: 0.1584
+Percentile 98: 1.5013
+Percentile 99: 2.4194
+Percentile 99.9: 5.5329
+
+--- Band 1: VH ---
+NoData value: -9999
+Files with NoData: 8/50381 (0.02%)
+NoData pixels: 41/1813716 (0.0023%)
+Min: -26.1871
+Max: -1.7555
+Mean: -12.4122
+Std: 3.4645
+Percentile 0.1: -26.1869
+Percentile 1: -21.1704
+Percentile 2: -19.7949
+Percentile 5: -18.0329
+Percentile 95: -6.7274
+Percentile 98: -5.4673
+Percentile 99: -4.6139
+Percentile 99.9: -1.7556
+
+--- Band 2: VV/VH ---
+NoData value: -9999
+Files with NoData: 0/50381 (0.00%)
+NoData pixels: 0/1813716 (0.0000%)
+Min: -1.7393
+Max: 1.4362
+Mean: 0.4743
+Std: 0.2937
+Percentile 0.1: -1.7391
+Percentile 1: -0.3573
+Percentile 2: -0.1944
+Percentile 5: -0.0178
+Percentile 95: 0.8942
+Percentile 98: 1.0129
+Percentile 99: 1.1020
+Percentile 99.9: 1.4362
+Plotting 1813716 values after filtering [-10, 10]
+
+--- Band 3: CHM ---
+NoData value: -9999
+Files with NoData: 0/50381 (0.00%)
+NoData pixels: 0/1813716 (0.0000%)
+Min: 0.0000
+Max: 41.5983
+Mean: 23.7747
+Std: 8.0878
+Percentile 0.1: 0.0000
+Percentile 1: 0.0000
+Percentile 2: 0.0000
+Percentile 5: 3.9032
+Percentile 95: 34.3049
+Percentile 98: 36.5967
+Percentile 99: 38.1326
+Percentile 99.9: 41.5027
+Plotting 1742754 values after removing zeros
+
+Histogram saved to /Users/siyux1927/local/thesis0926/plots/data-insight/stacked_band_histograms_60m.png
+
+(new) siyux1927@SiyudeMacBook-Pro preprocessing % python run_all_preprocessing.py --resolution 60
+[1/3] Building area-filtered labels and stratified splits (60m labels)...
+Area-filtered labels and stratified splits saved to:
+/Users/siyux1927/local/thesis0926/@data/treesatai_data/s1_60m_stratified/labels_train_filtered.json
+/Users/siyux1927/local/thesis0926/@data/treesatai_data/s1_60m_stratified/labels_val_filtered.json
+/Users/siyux1927/local/thesis0926/@data/treesatai_data/s1_60m_stratified/labels_test_filtered.json
+/Users/siyux1927/local/thesis0926/@data/treesatai_data/s1_60m_stratified/classes.json
+/Users/siyux1927/local/thesis0926/@data/treesatai_data/s1_60m_stratified/label_stats.json
+
+[2/3] Computing class weights (60m labels)...
+Class weights saved to: /Users/siyux1927/local/thesis0926/@data/treesatai_data/s1_60m_stratified/class_weights.json
+Classes: ['Abies', 'Acer', 'Alnus', 'Betula', 'Cleared', 'Fagus', 'Fraxinus', 'Larix', 'Picea', 'Pinus', 'Populus', 'Prunus', 'Pseudotsuga', 'Quercus', 'Tilia']
+Raw counts: [1039, 2633, 2714, 2801, 4584, 8891, 2402, 3892, 8835, 9251, 413, 313, 3594, 9819, 187]
+Class frequencies:
+[0.01693065 0.0429051  0.044225   0.04564268 0.07469691 0.14488007
+ 0.03914092 0.06342068 0.14396754 0.15074632 0.00672989 0.00510038
+ 0.05856472 0.16000196 0.00304719]
+Normalized inverse-frequency weights:
+[0.06575657 0.025948   0.02517357 0.02439167 0.01490425 0.0076843
+ 0.02844341 0.01755423 0.007733   0.00738526 0.16542634 0.21827821
+ 0.01900976 0.00695805 0.36535336]
+
+[3/3] Building numpy training arrays from stacked S1+CHM (60m)...
+Training arrays saved to: /Users/siyux1927/local/thesis0926/@data/training-data-60m
+
+Preprocessing pipeline completed.

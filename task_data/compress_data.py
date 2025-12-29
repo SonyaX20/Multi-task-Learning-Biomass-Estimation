@@ -211,8 +211,8 @@ def main():
     geojson_path = Path(__file__).parent / 'bb_60m.GeoJSON'
     output_dir = Path(__file__).parent / 'hdf5_data'
     
-    # CHM threshold for filtering (adjust based on distribution_analysis.py results)
-    chm_threshold = 45.23
+    # CHM threshold for filtering (90th percentile from calculate_chm_percentile.py)
+    chm_threshold = 36.7861
     
     # Check if GeoJSON exists
     if not geojson_path.exists():
