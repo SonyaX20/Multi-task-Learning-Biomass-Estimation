@@ -123,6 +123,23 @@ def _build_split_arrays(
         if data.shape[0] < 4:
             raise ValueError(f"Expected at least 4 bands in {tif_path}, got {data.shape[0]}")
 
+        # Global percentile-based outlier clipping per band
+        # Band order: 0=VV, 1=VH, 2=VV/VH, 3=CHM
+        thresholds = [
+            (-21.7151, 8.7294),   # VV
+            (-32.2846, 0.7015),   # VH
+            (-9.0865, 7.1253),    # VV/VH
+            (0.0, 44.7409),       # CHM
+        ]
+
+        for b, (low, high) in enumerate(thresholds):
+            if b >= data.shape[0]:
+                break
+            band = data[b]
+            mask = (band < low) | (band > high)
+            band[mask] = NODATA_VALUE
+            data[b] = band
+
         # Bilinear-style fill for VV, VH, VV/VH bands
         for b in range(3):
             band = data[b]

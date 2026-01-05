@@ -62,7 +62,7 @@ CHM_UPPER_LIMIT = 1000
 
 # Directory with per-tile 1 m CHM rasters (standard LGLN CHM tiles).
 # Default: "data/chm_standard"
-CHM_TILE_DIR_REL = os.path.join("data", "chm_standard")
+CHM_TILE_DIR_REL = os.path.join("@data", "chm_60m")
 
 # Directory with TreeSat-to-tile mapping JSONs (treesat_to_tiles_<res>m.json).
 # Default: "@data-processing/dtm-dsm-treesat-links"
@@ -71,25 +71,25 @@ TREESAT_MAPPING_DIR_REL = os.path.join("@data-processing", "dtm-dsm-treesat-link
 # Root directory with TreeSat Sentinel-1 rasters used as CHM reprojection
 # templates. Files live under "{resolution}m" subfolders.
 # Default root: "data/treesatai_data/s1"
-S1_TEMPLATE_DIR_ROOT_REL = os.path.join("data", "treesatai_data", "s1")
+S1_TEMPLATE_DIR_ROOT_REL = os.path.join("@data", "treesatai_data", "s1")
 
 # Output directory pattern for per-sample CHM rasters on the TreeSat grid.
 # Examples: "data/chm_60m", "data/chm_200m"
-CHM_TREESAT_OUT_DIR_PATTERN = os.path.join("data", "chm_{res}m")
+CHM_TREESAT_OUT_DIR_PATTERN = os.path.join("@data", "chm_{res}m")
 
 # Output directory pattern for stacked S1+CHM rasters on the TreeSat grid.
 # Examples: "data/stacked_treesat_60m", "data/stacked_treesat_200m"
-STACKED_TREESAT_OUT_DIR_PATTERN = os.path.join("data", "stacked_treesat_{res}m")
+STACKED_TREESAT_OUT_DIR_PATTERN = os.path.join("@data", "stacked_treesat_{res}m")
 
 # Directory with ETH 10 m CHM rasters used as reprojection targets in debug
 # mode. Files: "ETH_CHM_10m_<tile_id>.tif".
 # Default: "data/ETH_chm_10m"
-ETH_CHM_10M_DIR_REL = os.path.join("data", "ETH_chm_10m")
+ETH_CHM_10M_DIR_REL = os.path.join("@data", "ETH_chm_10m")
 
 # Output directory for debug CHM rasters reprojected to the ETH 10 m grid.
 # Files: "<tile_id>.tif".
 # Default: "data/chm_debug_tiles"
-CHM_DEBUG_TILES_DIR_REL = os.path.join("data", "chm_debug_tiles")
+CHM_DEBUG_TILES_DIR_REL = os.path.join("@data", "chm_debug_tiles")
 
 
 def parse_args() -> argparse.Namespace:
@@ -267,10 +267,11 @@ def reproject_to_template_max(
     nodata_mask = chm == NODATA_VALUE
     valid_mask = ~nodata_mask
     chm[valid_mask & (chm < 0.0)] = 0.0
-    chm[valid_mask & (chm > 41.5983)] = 41.5983
+    # chm[valid_mask & (chm > 41.5983)] = 41.5983
 
     # 2) Apply 20x20 max filter in source (1 m) grid
-    filtered = maximum_filter(chm, size=20, mode="nearest")
+    filtered = maximum_filter(chm, size=10, mode="nearest")
+    # filtered = chm
 
     # 3) Reproject to template grid with bilinear resampling
     dst_data = np.full((height, width), NODATA_VALUE, dtype=np.float32)
@@ -337,20 +338,20 @@ def stack_chm_and_s1(
     nodata_mask = chm == NODATA_VALUE
     valid_mask = ~nodata_mask
 
-    if np.any(valid_mask):
-        cleaned = chm.copy()
+    # if np.any(valid_mask):
+    #     cleaned = chm.copy()
 
-        neg_mask = valid_mask & (cleaned < 0.0)
-        cleaned[neg_mask] = 0.0
+    #     neg_mask = valid_mask & (cleaned < 0.0)
+    #     cleaned[neg_mask] = 0.0
 
-        upper_clip_mask = (
-            valid_mask
-            & (cleaned > CHM_UPPER_LIMIT)
-        )
-        cleaned[upper_clip_mask] = CHM_UPPER_LIMIT
+    #     upper_clip_mask = (
+    #         valid_mask
+    #         & (cleaned > CHM_UPPER_LIMIT)
+    #     )
+    #     cleaned[upper_clip_mask] = CHM_UPPER_LIMIT
 
-        cleaned[nodata_mask] = 0.0
-        chm = cleaned
+    #     cleaned[nodata_mask] = 0.0
+    #     chm = cleaned
 
     vv = s1_data[0]
     vh = s1_data[1]
@@ -364,9 +365,9 @@ def stack_chm_and_s1(
         band[mask & (band < low)] = low
         band[mask & (band > high)] = high
 
-    _clip_band_inplace(vv, -18.0383, 5.5330)
-    _clip_band_inplace(vh, -26.1871, -1.7555)
-    _clip_band_inplace(vv_vh, -1.7393, 1.4362)
+    # _clip_band_inplace(vv, -18.0383, 5.5330)
+    # _clip_band_inplace(vh, -26.1871, -1.7555)
+    # _clip_band_inplace(vv_vh, -1.7393, 1.4362)
 
     stacked = np.zeros((4, vv.shape[0], vv.shape[1]), dtype=np.float32)
     stacked[0] = vv
@@ -397,7 +398,7 @@ def run_stacking_pipeline(
     project_root: str,
     resolution: int,
     chm_out_dir: str,
-) -> None:
+    ) -> None:
     """Run CHM+S1 stacking over all CHM patches in ``chm_out_dir``.
 
     Uses global ``S1_TEMPLATE_DIR_ROOT_REL`` and
@@ -524,10 +525,11 @@ def run_debug_chm_tiles(
             nodata_mask = chm == NODATA_VALUE
             valid_mask = ~nodata_mask
             chm[valid_mask & (chm < 0.0)] = 0.0
-            chm[valid_mask & (chm > 41.5983)] = 41.5983
+            # chm[valid_mask & (chm > 41.5983)] = 41.5983
 
             # Apply 20x20 max filter in native (1 m) grid
-            filtered = maximum_filter(chm, size=20, mode="nearest")
+            # filtered = chm.copy()
+            filtered = maximum_filter(chm, size=10, mode="nearest")
 
             with rasterio.open(tmpl_path) as tmpl:
                 dst_meta = tmpl.meta.copy()
@@ -598,59 +600,59 @@ def main() -> None:
     out_dir = os.path.join(project_root, out_dir_rel)
     os.makedirs(out_dir, exist_ok=True)
 
-    successful = 0
-    failed = 0
-    missing_template = 0
-    missing_chm_tiles = 0
+    # successful = 0
+    # failed = 0
+    # missing_template = 0
+    # missing_chm_tiles = 0
 
-    print("===== 3. Reproject CHM tiles to TreeSat grid =====")
-    for treesat_id, info in tqdm(
-        treesat_mapping.items(), desc=f"Reproject+filter+reproject CHM ({args.resolution}m)"
-    ):
-        template = template_info.get(treesat_id)
-        if template is None:
-            missing_template += 1
-            continue
+    # print("===== 3. Reproject CHM tiles to TreeSat grid =====")
+    # for treesat_id, info in tqdm(
+    #     treesat_mapping.items(), desc=f"Reproject+filter+reproject CHM ({args.resolution}m)"
+    # ):
+    #     template = template_info.get(treesat_id)
+    #     if template is None:
+    #         missing_template += 1
+    #         continue
 
-        dtm_tiles = info.get("dtm_tiles", [])
-        if not dtm_tiles:
-            missing_chm_tiles += 1
-            continue
+    #     dtm_tiles = info.get("dtm_tiles", [])
+    #     if not dtm_tiles:
+    #         missing_chm_tiles += 1
+    #         continue
 
-        tile_ids = [t["tile_id"] for t in dtm_tiles]
+    #     tile_ids = [t["tile_id"] for t in dtm_tiles]
 
-        # Check that all CHM tiles exist
-        missing = [tid for tid in tile_ids if tid not in chm_file_map]
-        if missing:
-            missing_chm_tiles += 1
-            continue
+    #     # Check that all CHM tiles exist
+    #     missing = [tid for tid in tile_ids if tid not in chm_file_map]
+    #     if missing:
+    #         missing_chm_tiles += 1
+    #         continue
 
-        out_path = os.path.join(out_dir, f"{treesat_id}.tif")
-        if os.path.exists(out_path):
-            continue
+    #     out_path = os.path.join(out_dir, f"{treesat_id}.tif")
+    #     if os.path.exists(out_path):
+    #         continue
 
-        try:
-            mosaic_data, mosaic_transform, src_crs = mosaic_chm_tiles(
-                tile_ids, chm_file_map
-            )
-            chm_reproj, out_meta = reproject_to_template_max(
-                mosaic_data, mosaic_transform, src_crs, template
-            )
+    #     try:
+    #         mosaic_data, mosaic_transform, src_crs = mosaic_chm_tiles(
+    #             tile_ids, chm_file_map
+    #         )
+    #         chm_reproj, out_meta = reproject_to_template_max(
+    #             mosaic_data, mosaic_transform, src_crs, template
+    #         )
 
-            with rasterio.open(out_path, "w", **out_meta) as dst:
-                dst.write(chm_reproj, 1)
+    #         with rasterio.open(out_path, "w", **out_meta) as dst:
+    #             dst.write(chm_reproj, 1)
 
-            successful += 1
-        except Exception as exc:  # noqa: BLE001
-            failed += 1
-            print(f"Failed for {treesat_id}: {exc}")
+    #         successful += 1
+    #     except Exception as exc:  # noqa: BLE001
+    #         failed += 1
+    #         print(f"Failed for {treesat_id}: {exc}")
 
-    print("\nReprojection + filtering + resampling complete:")
-    print(f"  Successful: {successful}")
-    print(f"  Failed: {failed}")
-    print(f"  Missing template: {missing_template}")
-    print(f"  Missing CHM tiles: {missing_chm_tiles}")
-    print(f"  Output directory: {out_dir}")
+    # print("\nReprojection + filtering + resampling complete:")
+    # print(f"  Successful: {successful}")
+    # print(f"  Failed: {failed}")
+    # print(f"  Missing template: {missing_template}")
+    # print(f"  Missing CHM tiles: {missing_chm_tiles}")
+    # print(f"  Output directory: {out_dir}")
 
     if args.stack:
         print("===== 4. Stack CHM with Sentinel-1 =====")

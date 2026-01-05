@@ -13,8 +13,8 @@ If you are reading the thesis: this is the implementation behind
 **Chapter 4**.
 
 <p>
-<img src="../@plots/chm-data-insight/chm_lgln_eth.png" alt="CHM Comparison: LGLN vs ETH" width="450">
 <img src="../@plots/chm-data-insight/chm_lgln_meta.png" alt="CHM Comparison: LGLN vs Meta" width="450">
+<img src="../@plots/chm-data-insight/chm_lgln_eth.png" alt="CHM Comparison: LGLN vs ETH" width="450">
 </p>
 
 ## 1. What this does

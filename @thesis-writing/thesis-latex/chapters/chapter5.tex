@@ -1,0 +1,90 @@
+\chapter{Discussion and Conclusion}
+\label{chap:discussion}
+
+This chapter connects the experimental findings back to the research questions from Chapter~\ref{chap:introduction}. The experiments tested multitask learning for forest monitoring using Sentinel-1 SAR data on two datasets: TreeSatAI-CHM (small patches, classification + height) and iMAESTRO (larger patches, segmentation + height + biomass with physics constraints).
+
+\section{Answering the Research Questions}
+
+\textbf{Question 1: Can TreeSatAI be extended with canopy height labels?}
+
+Yes. The TreeSatAI benchmark was extended with height labels from German LiDAR data. The process generated canopy height models from terrain and surface elevation data, aligned them to the TreeSatAI grid, and combined them with Sentinel-1 backscatter. The resulting TreeSatAI-CHM dataset keeps the original species labels while adding pixel-level height information.
+
+Validation confirmed the data quality. Negative values were removed, extremes were clipped, and height distributions matched expected ranges for German forests. Tests with Sentinel-2 optical data achieved much better performance (32.8\% classification, 5.78m RMSE for height), confirming the dataset contains real patterns and that modest SAR performance comes from radar's inherent limitations, not data problems.
+
+\textbf{Question 2: How do shared encoders learn features for multiple tasks?}
+
+The gradient and representation analyses show a clear pattern. Early encoder layers learn basic features like edges and textures that are mostly shared, though tasks sometimes conflict when they need different things. Middle layers learn forest structure features that align moderately well across tasks. The bottleneck learns abstract concepts that are strongly shared across related tasks.
+
+Task-specific decoders then refine these shared features. CKA analysis in iMAESTRO shows similarity decreasing from bottleneck to output as tasks specialize. But height and biomass decoders stay highly similar throughout when coupled by the allometric constraint, showing that related tasks can maintain aligned features even during specialization.
+
+\textbf{Question 3: When do gradient conflicts happen and how to manage them?}
+
+Gradient analysis shows conflicts mainly occur in early encoder layers during initial training. This makes sense---classification wants edge-preserving features to distinguish genus boundaries, while regression wants smoothing features to reduce speckle noise.
+
+As training continues, alignment improves, especially in deeper layers. The bottleneck shows the strongest agreement, meaning tasks agree on high-level concepts. Task-specific learning rates (TreeSatAI-CHM) and uncertainty weighting (iMAESTRO) successfully balance these competing needs. Height and biomass in iMAESTRO show particularly strong alignment, demonstrating that physics constraints can reduce conflicts by guiding tasks toward compatible goals.
+
+\textbf{Question 4: Does multitask learning match or beat single-task baselines?}
+
+Multitask learning achieves comparable or slightly better performance in both datasets:
+\begin{itemize}
+    \item TreeSatAI-CHM: Classification F1 improves from 12.61\% to 12.82\%, regression maintains similar performance ($R^2 = 0.033$ vs 0.042 baseline)
+    \item iMAESTRO: Height $R^2$ improves from 0.255 to 0.265 (+3.7\%), biomass $R^2$ improves from 0.024 to 0.039 (+62.5\% relative)
+\end{itemize}
+
+The improvements are modest but consistent. This reflects C-band SAR's fundamental limits for these tasks, not multitask learning failures. TreeSatAI-CHM has tiny patches ($6\times 6$ pixels) limiting what can be learned, while iMAESTRO faces SAR saturation for high biomass.
+
+Beyond raw numbers, multitask learning offers practical benefits. One shared encoder serves multiple tasks, cutting parameters and inference time versus separate models. The shared encoder acts as regularization, preventing overfitting to any single task. Physics constraints ensure predictions follow known ecological relationships, improving reliability even when accuracy is limited.
+
+\textbf{Question 5: Can physics-aware constraints improve multitask learning?}
+
+Yes. The allometric constraint in iMAESTRO successfully couples height and biomass prediction. High gradient alignment (cosine similarity 0.4-0.9) and CKA similarity (0.64-0.81 across decoder layers) show the constraint guides both tasks toward consistent predictions. While absolute performance gains are modest, the constraint helps the model learn structured predictions that respect the ecological relationship between height and biomass.
+
+\section{Key Takeaways}
+
+The two datasets provided different but complementary insights into how multitask learning works for forest monitoring from SAR data.
+
+\textbf{Main challenges and solutions.} The biggest challenge across both datasets was balancing tasks with different loss scales. Classification uses binary cross-entropy (values around 0.3-0.8) while regression uses RMSE (values around 5-15m), creating a two-order-of-magnitude difference that makes optimization difficult. When tasks operate on such different scales, the optimizer struggles to find learning rates that work well for both---a rate suitable for one task often causes the other to diverge or stagnate.
+
+Two approaches successfully addressed this challenge. In TreeSatAI-CHM, task-specific learning rates were applied to different parameter groups (shared encoder, classification head, regression decoder). The encoder used $5\times 10^{-6}$, classification head $5\times 10^{-6}$, and regression decoder $5\times 10^{-5}$. This allowed each component to learn at an appropriate pace. In iMAESTRO, uncertainty weighting automatically balanced task contributions by learning uncertainty parameters ($\sigma$) for each task. The model learned to down-weight tasks with higher uncertainty, effectively normalizing their loss contributions. Both approaches require careful tuning (task-specific rates) or additional learnable parameters (uncertainty weights), but proved effective in practice.
+
+Task asymmetry was another consistent pattern. Regression tasks benefited more from shared encoders than classification tasks. This asymmetry has multiple causes. First, regression's continuous outputs provide stronger training signals than classification's discrete predictions. Second, output granularity matters---in TreeSatAI-CHM, classification makes one prediction per $6\times 6$ patch while regression makes 36 (one per pixel), so regression contributes much more gradient per sample. Third, regression tasks may have more compatible feature requirements across different prediction targets (height and biomass both relate to forest structure), while classification requires genus-specific discriminative features that don't transfer as well.
+
+Both datasets also face inherent data limits that constrain absolute performance. TreeSatAI-CHM has tiny patches ($6\times 6$ pixels) with little spatial context---at 10m resolution, this covers only 60m $\times$ 60m on the ground, barely enough to capture a few tree crowns. The small patch size limits what spatial patterns can be learned. iMAESTRO has larger patches but faces label quality issues (synthetic data from forest simulators) and C-band SAR saturation for high biomass (around 100-150 t/ha). SAR backscatter saturates because the signal penetration depth becomes limited in dense forests, making it impossible to distinguish biomass variations above the saturation threshold. These fundamental limits cap performance regardless of the learning approach. C-band SAR simply has inherent physical limits for species classification (lacks spectral information) and high biomass estimation (saturation effects).
+
+\textbf{Effective approaches.} Despite these challenges, several strategies proved reliable across both datasets. Gradient analysis revealed that tasks generally align in deeper layers while occasionally conflicting in early layers. This pattern held for both datasets and informed architectural choices. The shared encoder provided regularization benefits without causing major negative transfer---multitask models matched or slightly exceeded single-task baselines in both experiments.
+
+The ablation study in TreeSatAI-CHM showed that simpler architectures work better with limited data. Cross-stitch networks and cross-attention both performed worse than plain hard sharing, likely because the small dataset and tiny patches can't leverage the extra parameters effectively. This suggests model complexity should match data availability.
+
+Physics-aware constraints proved valuable in iMAESTRO. The allometric constraint coupled height and biomass prediction, leading to strong gradient alignment (0.4-0.9) and representation similarity (0.64-0.81) between these tasks. While absolute performance gains were modest, the constraint helped the model learn predictions that respect ecological relationships.
+
+\textbf{Key contributions.} This work makes several contributions to multitask learning for forest monitoring:
+
+First, the TreeSatAI benchmark was extended with canopy height labels from German LiDAR data, creating TreeSatAI-CHM for multitask learning research. The dataset keeps the original spatial coverage and species labels while adding pixel-level height information.
+
+Second, multitask architectures were developed and tested for combining classification and regression from SAR data. The MultiTaskUNet with shared encoder and task-specific decoders provides a baseline for future work.
+
+Third, task interactions were systematically analyzed using gradient cosine similarity and centered kernel alignment (CKA). These analyses show where tasks align (deeper layers) and conflict (early layers), giving quantitative evidence of how multitask learning works.
+
+Fourth, three parameter sharing strategies (hard sharing, cross-stitch, cross-attention) were compared, showing that simpler architectures work better with limited data. This informs architectural choices for similar problems.
+
+Fifth, physics-aware multitask learning was demonstrated by incorporating allometric constraints. The sustained high alignment between height and biomass tasks shows that domain knowledge can guide feature learning toward consistent, plausible predictions.
+
+Finally, the experiments showed that multitask learning is practically feasible for forest monitoring from SAR data. Despite challenges like loss scale mismatch and occasional gradient conflicts, multitask models match baseline performance while using fewer parameters and less inference time. This makes multitask learning viable for operational applications where deploying multiple single-task models would be expensive.
+
+\section{Looking Forward}
+
+Several directions could build on this work:
+
+\textbf{Architecture Design.} The gradient analysis suggests that letting tasks specialize in early layers while sharing deeper layers could reduce conflicts. Architectures like cross-stitch networks or progressive layer sharing might work well with larger datasets. The ablation study showed these approaches underperform with limited data, but they could prove valuable at scale.
+
+\textbf{Physics Constraints.} The allometric constraint successfully couples height and biomass, but additional physical relationships could be incorporated. For example, genus-specific allometric equations would provide stronger supervision than the generic equation used here. Other relationships like crown diameter to height or age to biomass could also be explored.
+
+\textbf{Data.} Both experiments were limited by training data size. Larger datasets with more diverse forest types and conditions would enable more robust learning and better generalization. The computational efficiency of multitask learning becomes more valuable at scale, where deploying multiple single-task models gets expensive.
+
+\textbf{Final thoughts.} This thesis investigated multitask learning for forest monitoring from Sentinel-1 SAR data. The main finding is that multitask learning works for this problem. While performance improvements over single-task baselines are modest, multitask learning offers computational efficiency, regularization benefits, and the ability to incorporate domain knowledge through physics constraints.
+
+The gradient and representation analyses show how shared architectures learn hierarchical features. Low-level features are mostly shared across tasks, while high-level features progressively specialize. Physics constraints can maintain alignment between related tasks even during specialization.
+
+The challenges identified here, such as loss scale mismatch, task asymmetry, and datalimitations, they have solutions. Task-specific learning rates, uncertainty weighting, and physics constraints all work to address these issues. The modest performance improvements reflect fundamental sensor and data limits, not multitask learning failures. C-band SAR simply has inherent limits for species classification and high biomass estimation.
+
+For operational forest monitoring, multitask learning offers a practical solution. One model can estimate multiple forest attributes, cutting computational costs while maintaining prediction quality. Physics constraints ensure predictions follow ecological relationships, improving reliability for decision-making. As datasets grow and sensors improve, multitask learning provides a framework to leverage these advances efficiently.

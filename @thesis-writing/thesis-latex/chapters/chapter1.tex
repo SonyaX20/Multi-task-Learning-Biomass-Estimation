@@ -1,0 +1,33 @@
+\chapter{Introduction}
+\label{chap:introduction}
+
+Forests play a central role in ecosystem preservation, and reliable methods for monitoring forest structure at large scales are essential for resource management. Traditional forest inventory relies on field surveys where trained personnel measure attributes like tree height, diameter, and species composition. These methods are accurate at the plot level but costly and impractical for regional or continental assessments.
+
+Remote sensing offers a scalable alternative. Optical sensors such as Landsat and Sentinel-2 have been widely used for vegetation monitoring through spectral reflectance analysis. However, optical imagery is limited by cloud cover, with approximately 67\% of Earth's surface obscured at any given time, and tropical forests experiencing persistent cloud conditions for much of the year. Synthetic Aperture Radar (SAR) addresses this limitation through active microwave sensing that operates regardless of weather or illumination conditions. The European Space Agency's Sentinel-1 mission provides freely available C-band SAR data with global coverage and six-day revisit times. Research has demonstrated that SAR backscatter contains information about forest vertical structure, with studies achieving correlation coefficients of 0.72--0.84 for canopy height prediction when combining Sentinel-1 with auxiliary data sources \cite{li2020canopy,wang2022canopy}.
+
+Deep learning has advanced remote sensing image analysis, with convolutional neural networks and encoder--decoder architectures achieving strong performance for classification and regression tasks. Lang et al.~\cite{lang2023canopy} produced a global canopy height map at 10~m resolution by fusing GEDI LiDAR with Sentinel-2 imagery using deep learning, demonstrating the potential of neural networks for large-scale forest parameter estimation. Most existing approaches, however, train separate models for individual forest parameters, overlooking relationships among attributes like species identity and canopy height. Multitask learning offers an alternative paradigm where a single model predicts multiple parameters simultaneously, potentially exploiting shared representations to improve accuracy across related tasks \cite{vandenhende2022mtlsurvey}.
+
+A key challenge for developing multitask models is data availability. Existing benchmark datasets for forest remote sensing typically focus on single tasks: some provide species labels without height annotations, others offer LiDAR-derived heights without species information. This fragmentation limits research on multitask approaches that could exploit the interdependencies among forest attributes. The TreeSatAI benchmark \cite{ahlswede2023treesatai} provides Sentinel-1 imagery with species labels for German forests, covering 20 European tree species grouped into 15 genera across Lower Saxony. However, it does not include height information. Extending this established benchmark with canopy height labels derived from official German LiDAR elevation products represents a pathway to enable multitask learning research while maintaining data quality and spatial coverage.
+
+This thesis investigates multitask learning for forest attribute estimation from Sentinel-1 SAR imagery. This thesis uses two datasets to address different aspects of multitask learning. The primary focus is on TreeSatAI-CHM, which extends the established TreeSatAI benchmark with canopy height labels derived from German LiDAR data. This dataset enables investigation of fundamental multitask learning challenges like loss scale mismatches, gradient conflicts, and parameter sharing strategies in a controlled environment with well-recognized benchmark data. Additionally, the iMAESTRO dataset provides comprehensive reference data for genus segmentation, canopy height, and biomass estimation, enabling testing of physics-aware deep learning through allometric constraints that link height and biomass.
+
+This thesis addresses the following questions:
+
+\begin{enumerate}
+    \item Can TreeSatAI be extended with canopy height labels?
+    \item How do shared encoders learn features for multiple tasks?
+    \item When do gradient conflicts happen and how to manage them?
+    \item Does multitask learning match or beat single-task baselines?
+    \item Can physics-aware constraints improve multitask learning?
+\end{enumerate}
+
+The main contributions of this thesis are:
+
+\begin{itemize}
+    \item Extended the TreeSatAI benchmark with canopy height labels derived from official German LiDAR elevation products, creating TreeSatAI-CHM for multitask learning research.
+    \item Developed multitask architectures for joint species classification and height regression from Sentinel-1 SAR imagery.
+    \item Demonstrated physics-aware multitask learning by incorporating allometric constraints linking canopy height and biomass.
+    \item Provided quantitative evidence of task interactions showing where tasks align (deeper layers) and conflict (early layers) in shared architectures.
+\end{itemize}
+
+The remainder of this thesis is organized as follows. Chapter~\ref{chap:background} provides the theoretical background, covering SAR remote sensing for forest monitoring, multitask learning principles and applications, and dataset availability for forest parameter extraction. Chapter~\ref{chap:methodik} describes the methodology, including dataset preparations and experimental design. The TreeSatAI-CHM dataset construction involves generating canopy height models from digital terrain and surface models, aligning them to the TreeSatAI patch grid. Model architectures include MLP and U-Net baselines, and a MultiTaskUNet with shared encoder and task-specific decoders for joint learning. The iMAESTRO dataset provides forest data with genus segmentation, canopy height, and biomass labels, enabling testing of allometric constraints. Chapter~\ref{chap:experiments} presents experiments and results, focusing on TreeSatAI-CHM for understanding fundamental multitask learning dynamics, with iMAESTRO experiments demonstrating physics-aware deep learning. Chapter~\ref{chap:discussion} concludes with key findings, connecting back to the thesis questions.

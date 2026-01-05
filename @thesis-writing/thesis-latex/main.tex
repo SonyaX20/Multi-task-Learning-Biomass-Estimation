@@ -1,0 +1,124 @@
+\documentclass[bibtotoc,liststotoc,BCOR=5mm,DIV=12]{scrbook}
+% \documentclass[a4paper,twoside,openright,11pt]{book}
+
+% use this declaration to set specific page margins
+%\usepackage[a4paper , lmargin = {2.7cm} , rmargin = {2.9cm} , tmargin = {2.7cm} , bmargin = {4.6cm} ]{geometry}
+\usepackage[a4paper]{geometry}
+\usepackage{pdfpages}
+\usepackage{sethesis}
+
+\usepackage[english, ngerman]{babel}
+% always use 'Figure' instead of german 'Abbildung' in captions
+\addto\captionsngerman{\renewcommand{\figurename}{Figure}}
+\addto\captionsenglish{\renewcommand{\figurename}{Figure}}
+\usepackage[round,authoryear]{natbib}  % author-year citations
+% \usepackage{bibgerm}        		% german references (commented out - conflicts with natbib)
+\usepackage[T1]{fontenc} % german characters
+\usepackage{amsmath} % math environments and symbols
+\usepackage{siunitx} % units and quantities
+\usepackage{graphicx} 				% it's recommended to use PDF images but you can use JPG or PNG as well
+\usepackage{url}            		% format URLs
+\usepackage{hyperref} 				% create hyperlinks
+\usepackage{listings, color}	% for source code
+\usepackage{subfig}						% two figures next to each other (example: figure 3a), figure 3b)
+\usepackage{scrlayer-scrpage}					% header and footer line
+\usepackage{todonotes}
+\usepackage{amssymb} % for \checkmark
+
+% Paragraph spacing: add space between paragraphs within sections
+\setlength{\parskip}{0.5em}
+
+% Figure caption formatting: bold Figure label, no indent on wrapped lines
+\usepackage{caption}
+\captionsetup[figure]{labelfont=bf, format=plain, justification=justified, singlelinecheck=false}
+\captionsetup[table]{labelfont=bf, format=plain, justification=justified, singlelinecheck=false}
+
+% header and footer line - no header & footer line on pages where a new chapter starts
+% \pagestyle{scrheadings}
+% \ohead{Design and Implementation of X}
+% \ihead{Your Name}
+% \ofoot[]{\thepage}
+% \ifoot{Thesis, TU Berlin, Fachgebiet D2IP, 2024}
+
+% configure link appearance: red outlines for structural links, green for citations
+\hypersetup{
+  colorlinks=false,
+  pdfborder={0 0 1},
+  linkbordercolor={1 0 0},   % sections, figures, etc. (red)
+  citebordercolor={0 1 0},   % citations (green)
+  urlbordercolor={0 0 1}     % URLs (blue)
+}
+
+% set paths where images are stored
+\graphicspath{{./img/}{./img/data-insight/}{./img/imaestro-data/}{./img/training-data-insight/}{./img/training-results/}{./img/training-results/treesatai/}{./img/training-results/imaestro-baseline/}{./img/training-results/imaestro-mtl/}}
+
+\uniname{Technische Universität Berlin}
+\fachgebiet{Computer Vision and Remote Sensing}
+% \institut{Institut für Praktische Informatik}
+\fachbereich{Fakultät IV Elektrotechnik und Informatik}
+\studiengang{MSc. Computer Engineering}
+% Angaben zur Arbeit
+\author{Siyu Xiao}
+\title{Multitask Learning for Extraction of Bio-/Geo Physical Parameters from SAR Imagery}
+% \englishtitle{<Englischer Titel der Arbeit>}
+\ort{Berlin}
+\thesistype{Master's Thesis}
+%\thesistype{Masterarbeit}
+% Pruefer
+\erstpru{Prof. Dr.-Ing. Olaf Hellwich}
+\zweitpru{Dr.-Ing. Ronny Hänsch}
+\betreu{Ragini Bal Mahesh}
+\datum{<Submission date>}
+
+\begin{document}
+% ---------------------------------------------------------------
+\renewcommand{\chaptername}{Chapter}
+
+\frontmatter
+
+\maketitle
+% \frontmatter
+    
+    
+    \include{./misc/self-assertion} 
+    \thispagestyle{empty}
+    \cleardoublepage
+    
+    
+    \include{./chapters/abstract}
+    \thispagestyle{empty}
+    \cleardoublepage
+    
+    \renewcommand{\contentsname}{Contents}
+    
+    \tableofcontents
+    \thispagestyle{empty}
+    
+    % \listoffigures
+    % \thispagestyle{empty}
+    
+    % \listoftables
+    % \thispagestyle{empty}
+    
+% --------------------------------------------------------------
+
+\mainmatter % comment single chapters for faster compilation
+    \input{./chapters/chapter1}
+    \input{./chapters/chapter2}
+    \input{./chapters/chapter3}
+    \input{./chapters/chapter4}
+    \input{./chapters/chapter5}
+    \appendix
+
+    % \input{./chapters/Anhang}
+
+% ---------------------------------------------------------------
+\bibliographystyle{plainnat}
+%\bibliographystyle{abbrv}
+%\bibliographystyle{alpha}
+\renewcommand\bibname{References}
+\bibliography{bib/manual}
+
+\backmatter
+
+\end{document}

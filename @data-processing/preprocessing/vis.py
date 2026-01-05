@@ -25,7 +25,7 @@ import numpy as np
 
 NODATA_VALUE = -9999.0
 BAND_LABELS = ["VV", "VH", "VV/VH", "CHM"]
-SPLITS = ["train", "val", "test"]
+SPLITS = ["Train", "Val", "Test"]
 
 
 def _get_project_root() -> Path:
@@ -41,7 +41,7 @@ def _get_training_dir(resolution: int) -> Path:
 
 
 def _ensure_output_dir(resolution: int) -> Path:
-    out_dir = _get_project_root() / "plots" / "training-data-insight"
+    out_dir = _get_project_root() / "@plots" / "training-data-insight"
     out_dir.mkdir(parents=True, exist_ok=True)
     return out_dir
 
@@ -71,7 +71,7 @@ def vis_sample_grid(
     train_idx: int = 0,
     val_idx: int = 0,
     test_idx: int = 0,
-) -> None:
+    ) -> None:
     """Visualize one sample from train/val/test as 3x4 grid.
 
     Rows:   train, val, test
@@ -122,7 +122,7 @@ def vis_sample_grid(
 
             # Column titles: band names
             if row == 0:
-                ax.set_title(BAND_LABELS[col], fontsize=9)
+                ax.set_title(BAND_LABELS[col], fontsize=17)
 
             # Row labels: split names
             if col == 0:
@@ -131,7 +131,7 @@ def vis_sample_grid(
                     0.5,
                     row_labels[row],
                     transform=ax.transAxes,
-                    fontsize=10,
+                    fontsize=17,
                     va="center",
                     ha="right",
                     rotation=90,
@@ -147,13 +147,13 @@ def vis_sample_grid(
             cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.02)
             ticks = np.linspace(vmin, vmax, 5)
             cbar.set_ticks(ticks)
-            cbar.ax.tick_params(labelsize=9)
+            cbar.ax.tick_params(labelsize=13)
             cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{x:.1f}' if x < 1 else f'{int(x)}'))
 
 
-    fig.suptitle(f"Train/Val/Test samples ({resolution} m)", fontsize=12)
+    fig.suptitle(f"", fontsize=12)
     plt.tight_layout()
-    plt.subplots_adjust(top=0.9, hspace=0.05, wspace=0.2)
+    plt.subplots_adjust(top=0.9, hspace=0.08, wspace=0.25)
 
     out_path = out_dir / f"sample_grid_{resolution}m.png"
     fig.savefig(out_path, dpi=150)
@@ -191,12 +191,13 @@ def _prepare_hist_data_band(values: np.ndarray, band_index: int) -> np.ndarray:
 def vis_histograms(
     on: bool = True,
     resolution: int = 60,
-    bins: int = 50,
-) -> None:
+    bins: int = 35,
+    ) -> None:
     """Plot histograms per band for train/val/test.
 
-    For each split, a 1x4 grid of histograms (one per band) is saved
-    as a separate PNG under the training-data directory.
+    Creates a single 3x4 grid with all splits combined:
+    - Rows: Train, Val, Test
+    - Columns: VV, VH, VV/VH, CHM
     """
 
     if not on:
@@ -204,18 +205,19 @@ def vis_histograms(
 
     out_dir = _ensure_output_dir(resolution)
 
-    for split in SPLITS:
+    # Create 3x4 grid: 3 rows (splits) x 4 columns (bands)
+    fig, axes = plt.subplots(3, 4, figsize=(16, 7), sharex='col', sharey=False)
+
+    for row, split in enumerate(SPLITS):
         X = _load_split_x(split, resolution)
         if X.ndim != 4 or X.shape[1] < 4:
             raise ValueError(
                 f"Expected {split}_x.npy to have shape (N, 4, H, W), got {X.shape}"
             )
 
-        fig, axes = plt.subplots(1, 4, figsize=(16, 3))
-
-        for b in range(4):
-            ax = axes[b]
-            vals = _prepare_hist_data_band(X[:, b, :, :], band_index=b)
+        for col in range(4):
+            ax = axes[row, col]
+            vals = _prepare_hist_data_band(X[:, col, :, :], band_index=col)
 
             if vals.size == 0:
                 ax.text(0.5, 0.5, "No data", ha="center", va="center")
@@ -223,23 +225,34 @@ def vis_histograms(
                 continue
 
             ax.hist(vals, bins=bins, alpha=0.7, edgecolor="black", linewidth=0.5)
-            ax.set_title(BAND_LABELS[b])
-            ax.set_xlabel("Value")
-            ax.set_ylabel("Count")
             ax.ticklabel_format(style="sci", axis="y", scilimits=(0, 0))
+            ax.tick_params(labelsize=13)
 
-        fig.suptitle(f"{split.capitalize()} histograms ({resolution} m)", fontsize=12)
-        plt.tight_layout()
+            # Band names at the top (first row only)
+            if row == 0:
+                ax.set_title(BAND_LABELS[col], fontsize=17, pad=10)
 
-        out_path = out_dir / f"{split}_histograms_{resolution}m.png"
-        fig.savefig(out_path, dpi=150)
-        plt.close(fig)
+            # Split names on the left (first column only)
+            if col == 0:
+                ax.set_ylabel(split, fontsize=17, rotation=90, labelpad=10)
+
+            # X-axis label only on bottom row
+            if row == 2:
+                ax.set_xlabel("Value", fontsize=17)
+
+    plt.tight_layout()
+    plt.subplots_adjust(hspace=0.2, wspace=0.2)
+
+    out_path = out_dir / f"histograms_{resolution}m.png"
+    fig.savefig(out_path, dpi=150)
+    plt.close(fig)
+    print(f"Saved combined histogram to {out_path}")
 
 
 def vis_class_distribution(
     on: bool = True,
     resolution: int = 60,
-) -> None:
+    ) -> None:
     """Plot bar chart of primary-class counts for train/val/test.
 
     Primary class per sample is taken as the first positive entry in
@@ -314,7 +327,7 @@ def main() -> None:
     resolution = 60
     vis_sample_grid(on=True, resolution=resolution)
     vis_histograms(on=True, resolution=resolution)
-    vis_class_distribution(on=True, resolution=resolution)
+    # vis_class_distribution(on=True, resolution=resolution)
 
 
 if __name__ == "__main__":

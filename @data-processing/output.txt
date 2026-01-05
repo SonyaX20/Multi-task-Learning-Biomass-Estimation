@@ -542,3 +542,100 @@ Normalized inverse-frequency weights:
 Training arrays saved to: /Users/siyux1927/local/thesis0926/@data/training-data-60m
 
 Preprocessing pipeline completed.
+
+@Dec.31
+--- Band 0: VV ---
+NoData value: -9999
+Files with NoData: 26/50381 (0.05%)
+NoData pixels: 145/1813716 (0.0080%)
+Min: -31.2206
+Max: 22.7386
+Mean: -6.1682
+Std: 3.7119
+Percentile 0.0001: -30.2819
+Percentile 0.001: -26.0439
+Percentile 0.01: -21.7151
+Percentile 0.1: -18.0383
+Percentile 1: -14.4780
+Percentile 2: -13.3651
+Percentile 5: -11.8630
+Percentile 95: 0.1584
+Percentile 98: 1.5013
+Percentile 99: 2.4194
+Percentile 99.9: 5.5330
+Percentile 99.99: 8.7294
+Percentile 99.999: 13.6147
+Percentile 99.9999: 20.4576
+
+--- Band 1: VH ---
+NoData value: -9999
+Files with NoData: 8/50381 (0.02%)
+NoData pixels: 41/1813716 (0.0023%)
+Min: -49.7253
+Max: 21.9384
+Mean: -12.4136
+Std: 3.4816
+Percentile 0.0001: -44.4909
+Percentile 0.001: -39.8503
+Percentile 0.01: -32.2846
+Percentile 0.1: -26.1871
+Percentile 1: -21.1704
+Percentile 2: -19.7949
+Percentile 5: -18.0329
+Percentile 95: -6.7274
+Percentile 98: -5.4673
+Percentile 99: -4.6139
+Percentile 99.9: -1.7555
+Percentile 99.99: 0.7015
+Percentile 99.999: 4.6080
+Percentile 99.9999: 17.8467
+
+--- Band 2: VV/VH ---
+NoData value: -9999
+Files with NoData: 0/50381 (0.00%)
+NoData pixels: 0/1813716 (0.0000%)
+Min: -288.3494
+Max: 1259.1809
+Mean: 0.4752
+Std: 1.5549
+Percentile 0.0001: -206.5319
+Percentile 0.001: -59.8944
+Percentile 0.01: -9.0865
+Percentile 0.1: -1.7393
+Percentile 1: -0.3573
+Percentile 2: -0.1944
+Percentile 5: -0.0178
+Percentile 95: 0.8942
+Percentile 98: 1.0129
+Percentile 99: 1.1020
+Percentile 99.9: 1.4362
+Percentile 99.99: 7.1253
+Percentile 99.999: 76.5601
+Percentile 99.9999: 839.3016
+Plotting 1812639 values after filtering [-10, 10]
+
+--- Band 3: CHM ---
+NoData value: -9999
+Files with NoData: 1/50381 (0.00%)
+NoData pixels: 6/1813716 (0.0003%)
+Min: 0.0000
+Max: 139.1765
+Mean: 19.9823
+Std: 8.7235
+Percentile 0.0001: 0.0000
+Percentile 0.001: 0.0000
+Percentile 0.01: 0.0000
+Percentile 0.1: 0.0000
+Percentile 1: 0.0000
+Percentile 2: 0.0000
+Percentile 5: 0.3530
+Percentile 95: 31.8151
+Percentile 98: 34.2258
+Percentile 99: 35.7976
+Percentile 99.9: 40.2415
+Percentile 99.99: 44.7409
+Percentile 99.999: 62.1240
+Percentile 99.9999: 112.1640
+Plotting 1719500 values after removing zeros
+
+Histogram saved to /Users/siyux1927/local/thesis0926/plots/data-insight/stacked_band_histograms_60m.png

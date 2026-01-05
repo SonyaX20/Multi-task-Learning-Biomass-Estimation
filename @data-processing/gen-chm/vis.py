@@ -40,7 +40,7 @@ def _get_project_root() -> str:
 
 def _ensure_output_dir() -> str:
     """Create and return the output directory for plots."""
-    out_dir = os.path.join(_get_project_root(), "plots", "data-insight")
+    out_dir = os.path.join(_get_project_root(), "@plots", "data-insight")
     os.makedirs(out_dir, exist_ok=True)
     return out_dir
 
@@ -60,9 +60,9 @@ def vis_dtm_dsm_chm(
         return
 
     root = _get_project_root()
-    dtm_dir = os.path.join(root, "data", "dtm1_tif")
-    dsm_dir = os.path.join(root, "data", "dsm1_tif")
-    chm_dir = os.path.join(root, "data", "chm")
+    dtm_dir = os.path.join(root, "@data", "dtm1_tif")
+    dsm_dir = os.path.join(root, "@data", "dsm1_tif")
+    chm_dir = os.path.join(root, "@data", "chm_60m")
 
     if indices is None:
         indices = [1, 2, 3, 4]
@@ -125,8 +125,8 @@ def vis_chm_lgln_meta(
         return
 
     root = _get_project_root()
-    chm_dir = os.path.join(root, "data", "chm")
-    meta_chm_dir = os.path.join(root, "data", "Meta_chm_1m")
+    chm_dir = os.path.join(root, "@data", "chm_60m")
+    meta_chm_dir = os.path.join(root, "@data", "Meta_chm_1m")
 
     if indices is None:
         indices = [1, 2, 3, 4]
@@ -134,11 +134,15 @@ def vis_chm_lgln_meta(
     chosen = [TILE_IDS[idx - 1] for idx in indices]
     n = len(chosen)
 
-    fig, axes = plt.subplots(2, n, figsize=(3 * n, 6))
+    fig, axes = plt.subplots(2, n, figsize=(3.5 * n, 5.5),
+                              gridspec_kw={'height_ratios': [1, 1]})
     if n == 1:
         axes = axes.reshape(2, 1)
 
-    row_labels = ["LGLN", "Meta"]
+    row_labels = ["CHM", "Meta"]
+
+    # Collect metrics for each column
+    metrics_list = []
 
     for col, tile_name in enumerate(chosen):
         chm_lgln = _load_raster(os.path.join(chm_dir, tile_name))
@@ -148,17 +152,17 @@ def vis_chm_lgln_meta(
         images = []
 
         for row in range(2):
-            im = axes[row, col].imshow(data_arrays[row], cmap="viridis")
+            im = axes[row, col].imshow(data_arrays[row], cmap="viridis", aspect='auto')
             images.append(im)
 
-        axes[0, col].set_title(os.path.splitext(tile_name)[0], fontsize=9, pad=2)
+        axes[0, col].set_title(os.path.splitext(tile_name)[0], fontsize=15, pad=2)
         for row in range(2):
             axes[row, col].axis("off")
             if col == 0:
                 axes[row, col].text(
                     -0.05, 0.5, row_labels[row],
                     transform=axes[row, col].transAxes,
-                    fontsize=10, va="center", ha="right",
+                    fontsize=15, va="center", ha="right",
                     rotation=90
                 )
             vmin = np.nanmin(data_arrays[row])
@@ -167,7 +171,7 @@ def vis_chm_lgln_meta(
             cbar = fig.colorbar(images[row], ax=axes[row, col], fraction=0.046, pad=0.02)
             ticks = np.linspace(vmin, vmax, 5)
             cbar.set_ticks(ticks)
-            cbar.ax.tick_params(labelsize=8)
+            cbar.ax.tick_params(labelsize=15)
             cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
 
         # Calculate metrics between LGLN and Meta
@@ -181,20 +185,23 @@ def vis_chm_lgln_meta(
             mae = np.mean(np.abs(lgln_valid - meta_valid))
             rmse = np.sqrt(np.mean((lgln_valid - meta_valid) ** 2))
             corr = np.corrcoef(lgln_valid, meta_valid)[0, 1]
-
-            metrics_text = f"MAE={mae:.2f}, RMSE={rmse:.2f}, Corr={corr:.3f}"
+            metrics_text = f"MAE={mae:.2f}\nRMSE={rmse:.2f}\nCorr={corr:.3f}"
         else:
             metrics_text = "No valid data"
 
-        axes[1, col].text(
-            0.5, -0.05, metrics_text,
-            transform=axes[1, col].transAxes,
-            fontsize=9, va="top", ha="center"
-        )
+        metrics_list.append(metrics_text)
 
-    fig.suptitle("CHM Comparison: LGLN, Meta", fontsize=12, y=0.98)
-    plt.tight_layout()
-    plt.subplots_adjust(top=0.92, bottom=0.08, hspace=0.05, wspace=0.15)
+    fig.suptitle("", fontsize=15, y=0.99)
+    plt.subplots_adjust(hspace=0.1, wspace=0.2, top=0.92, bottom=0.16)
+
+    # Add metrics text below each column using figure coordinates
+    for col, metrics_text in enumerate(metrics_list):
+        # Get the position of the bottom axis in figure coordinates
+        bbox = axes[1, col].get_position()
+        x_center = (bbox.x0 + bbox.x1) / 2
+        fig.text(x_center, 0.02, metrics_text, fontsize=15, va="bottom", ha="center",
+                 linespacing=1.2)
+
     plt.savefig(os.path.join(_ensure_output_dir(), "chm_lgln_meta.png"), dpi=150)
     plt.close(fig)
 
@@ -212,14 +219,14 @@ def _max_downsample(arr: np.ndarray, factor: int) -> np.ndarray:
 def vis_chm_lgln_eth(
     on: bool = True,
     indices: Iterable[int] | None = None,
-) -> None:
+    ) -> None:
     """Visualize CHM comparison between LGLN (downsampled to 10m with 5x5 smoothing) and ETH."""
     if not on:
         return
 
     root = _get_project_root()
-    chm_dir = os.path.join(root, "data", "chm_debug_tiles")
-    eth_chm_dir = os.path.join(root, "data", "ETH_chm_10m")
+    chm_dir = os.path.join(root, "@data", "chm_debug_tiles")
+    eth_chm_dir = os.path.join(root, "@data", "ETH_chm_10m")
 
     if indices is None:
         indices = [1, 2, 3, 4, 5, 6]
@@ -227,11 +234,15 @@ def vis_chm_lgln_eth(
     chosen = [TILE_IDS[idx - 1] for idx in indices]
     n = len(chosen)
 
-    fig, axes = plt.subplots(2, n, figsize=(3 * n, 6))
+    fig, axes = plt.subplots(2, n, figsize=(3.5 * n, 5.5),
+                              gridspec_kw={'height_ratios': [1, 1]})
     if n == 1:
         axes = axes.reshape(2, 1)
 
-    row_labels = ["LGLN (10m + 5x5 smooth)", "ETH"]
+    row_labels = ["CHM", "ETH"]
+
+    # Collect metrics for each column
+    metrics_list = []
 
     for col, tile_name in enumerate(chosen):
         chm_lgln = _load_raster(os.path.join(chm_dir, tile_name))
@@ -250,17 +261,17 @@ def vis_chm_lgln_eth(
         images = []
 
         for row in range(2):
-            im = axes[row, col].imshow(data_arrays[row], cmap="viridis")
+            im = axes[row, col].imshow(data_arrays[row], cmap="viridis", aspect='auto')
             images.append(im)
 
-        axes[0, col].set_title(os.path.splitext(tile_name)[0], fontsize=9, pad=2)
+        axes[0, col].set_title(os.path.splitext(tile_name)[0], fontsize=15, pad=2)
         for row in range(2):
             axes[row, col].axis("off")
             if col == 0:
                 axes[row, col].text(
                     -0.05, 0.5, row_labels[row],
                     transform=axes[row, col].transAxes,
-                    fontsize=10, va="center", ha="right",
+                    fontsize=15, va="center", ha="right",
                     rotation=90
                 )
             vmin = np.nanmin(data_arrays[row])
@@ -269,7 +280,7 @@ def vis_chm_lgln_eth(
             cbar = fig.colorbar(images[row], ax=axes[row, col], fraction=0.046, pad=0.02)
             ticks = np.linspace(vmin, vmax, 5)
             cbar.set_ticks(ticks)
-            cbar.ax.tick_params(labelsize=8)
+            cbar.ax.tick_params(labelsize=15)
             cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
 
         # Calculate metrics between LGLN 10m smoothed and ETH
@@ -289,20 +300,23 @@ def vis_chm_lgln_eth(
             mae = np.mean(np.abs(lgln_valid - eth_valid))
             rmse = np.sqrt(np.mean((lgln_valid - eth_valid) ** 2))
             corr = np.corrcoef(lgln_valid, eth_valid)[0, 1]
-
-            metrics_text = f"MAE={mae:.2f}, RMSE={rmse:.2f}, Corr={corr:.3f}"
+            metrics_text = f"MAE={mae:.2f}\nRMSE={rmse:.2f}\nCorr={corr:.3f}"
         else:
             metrics_text = "No valid data"
 
-        axes[1, col].text(
-            0.5, -0.05, metrics_text,
-            transform=axes[1, col].transAxes,
-            fontsize=9, va="top", ha="center"
-        )
+        metrics_list.append(metrics_text)
 
-    fig.suptitle("CHM Comparison: LGLN, ETH", fontsize=12, y=0.98)
-    plt.tight_layout()
-    plt.subplots_adjust(top=0.92, bottom=0.08, hspace=0.05, wspace=0.15)
+    fig.suptitle("", fontsize=15, y=0.1)
+    plt.subplots_adjust(hspace=0.1, wspace=0.2, top=0.92, bottom=0.16)
+
+    # Add metrics text below each column using figure coordinates
+    for col, metrics_text in enumerate(metrics_list):
+        # Get the position of the bottom axis in figure coordinates
+        bbox = axes[1, col].get_position()
+        x_center = (bbox.x0 + bbox.x1) / 2
+        fig.text(x_center, 0.02, metrics_text, fontsize=15, va="bottom", ha="center",
+                 linespacing=1.2)
+
     plt.savefig(os.path.join(_ensure_output_dir(), "chm_lgln_eth.png"), dpi=150)
     plt.close(fig)
 
@@ -317,7 +331,7 @@ def vis_stacked_s1_chm(
         return
 
     stacked_dir = os.path.join(
-        _get_project_root(), "data", f"stacked_treesat_{resolution}m"
+        _get_project_root(), "@data", f"stacked_treesat_{resolution}m"
     )
     all_files = sorted(f for f in os.listdir(stacked_dir) if f.endswith(".tif"))
 
@@ -380,7 +394,7 @@ def analyze_stacked_bands(
         return
 
     root = _get_project_root()
-    stacked_dir = os.path.join(root, "data", f"stacked_treesat_{resolution}m")
+    stacked_dir = os.path.join(root, "@data", f"stacked_treesat_{resolution}m")
 
     if not os.path.isdir(stacked_dir):
         print(f"Directory not found: {stacked_dir}")
@@ -392,7 +406,7 @@ def analyze_stacked_bands(
         return
 
     band_names = ["VV", "VH", "VV/VH", "CHM"]
-    percentiles = [0.1, 1, 2, 5, 95, 98, 99, 99.9]
+    percentiles = [0.0001,0.001, 0.01, 0.1, 1, 2, 5, 95, 98, 99, 99.9, 99.99, 99.999, 99.9999]
     nodata_val = -9999
 
     # Collect all data per band
@@ -460,11 +474,11 @@ def analyze_stacked_bands(
             ax.set_xlabel("Value")
             ax.set_ylabel("Count")
             ax.ticklabel_format(style='sci', axis='y', scilimits=(0, 0))
-        else:
+        # se:
             print("No valid data!")
 
-    fig.suptitle(f"Histograms for Bands", fontsize=12)
-    plt.tight_layout()
+    fig.su# ptitle(f"Histograms for Bands", fontsize=12)
+    plt# .tight_layout()
     plt.savefig(
         os.path.join(_ensure_output_dir(), f"stacked_band_histograms_{resolution}m.png"), dpi=150
     )
@@ -472,8 +486,8 @@ def analyze_stacked_bands(
     print(f"\nHistogram saved to {_ensure_output_dir()}/stacked_band_histograms_{resolution}m.png")
 
 if __name__ == "__main__":
-    vis_dtm_dsm_chm(on=False, indices=[1, 2, 3, 6])
+    # vis_dtm_dsm_chm(on=True, indices=[1, 2, 3, 6])
     vis_chm_lgln_eth(on=True, indices=[1, 2, 3, 6])
-    vis_chm_lgln_meta(on=False, indices=[1, 2, 3, 6])
-    vis_stacked_s1_chm(on=False, indices=[1, 20, 70], resolution=60)
-    analyze_stacked_bands(on=False, resolution=60)
+    vis_chm_lgln_meta(on=True, indices=[1, 2, 3, 6])
+    # vis_stacked_s1_chm(on=True, indices=[1, 20, 70], resolution=60)
+    # analyze_stacked_bands(on=True, resolution=60)
