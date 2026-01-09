@@ -21,7 +21,6 @@ This repository contains the **TreeSatAI-CHM dataset extension and baseline expe
 
 ## Mission & Objectives
 
-
 Forest monitoring requires simultaneous estimation of multiple structural attributes. This project investigates whether multi-task learning can leverage shared SAR feature representations to improve prediction of both categorical (species) and continuous (height) forest parameters.
 
 **Primary objectives:**

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.18)  8 JAN 2026 13:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.12.18)  9 JAN 2026 09:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -797,7 +797,8 @@ Package hyperref Info: Option `colorlinks' set `false' on input line 50.
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count362
 \l__pdf_internal_box=\box81
-) (./main.aux (./misc/self-assertion.aux) (./chapters/abstract.aux))
+)
+No file main.aux.
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
@@ -818,7 +819,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 73.
 LaTeX Font Info:    ... okay on input line 73.
-
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -888,7 +888,6 @@ File: translations-basic-dictionary-english.trsl (english translation file `tran
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 73.
 Package hyperref Info: Link coloring OFF on input line 73.
- (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
@@ -961,25 +960,55 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 
-] (./main.toc
-
-[7
-
-])
+]
+No file main.toc.
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
 
-[8] (./chapters/chapter1.tex
+[7
+
+]
+
+[8
+
+
+] (./chapters/chapter1.tex
 chapter 1.
+
+Package natbib Warning: Citation `li_high-resolution_2020' on page 1 undefined on input line 6.
+
+
+Package natbib Warning: Citation `wei_forest_2024' on page 1 undefined on input line 6.
+
+
+Package natbib Warning: Citation `lang_high-resolution_2023' on page 1 undefined on input line 8.
+
+
+Package natbib Warning: Citation `vandenhende_multi-task_2021' on page 1 undefined on input line 8.
+
+
+Package natbib Warning: Citation `ahlswede_treesatai_2023' on page 1 undefined on input line 10.
+
 
 
 [1
 
+]
+
+LaTeX Warning: Reference `chap:background' on page 2 undefined on input line 33.
 
 
-]) (./chapters/chapter2.tex
+LaTeX Warning: Reference `chap:methodik' on page 2 undefined on input line 33.
+
+
+LaTeX Warning: Reference `chap:experiments' on page 2 undefined on input line 33.
+
+
+LaTeX Warning: Reference `chap:discussion' on page 2 undefined on input line 33.
+
+) (./chapters/chapter2.tex
 
 [2{/usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
@@ -990,421 +1019,201 @@ chapter 1.
 ]
 chapter 2.
 
+LaTeX Warning: Reference `sec:sar_forest' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Reference `sec:mtl_rs' on page 5 undefined on input line 4.
+
+
+LaTeX Warning: Reference `sec:datasets' on page 5 undefined on input line 4.
+
+
+Package natbib Warning: Citation `moreira_tutorial_2013' on page 5 undefined on input line 9.
+
+
+Package natbib Warning: Citation `li_high-resolution_2020' on page 5 undefined on input line 13.
+
+
+Package natbib Warning: Citation `wei_forest_2024' on page 5 undefined on input line 13.
+
+
+Package natbib Warning: Citation `srivastava_joint_2017' on page 5 undefined on input line 13.
+
+
+Package natbib Warning: Citation `lang_high-resolution_2023' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `castro_deep_2024' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `mahesh_forest_2024' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `mahesh_deep_2023' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `wei_forest_2024' on page 5 undefined on input line 15.
+
+
+Package natbib Warning: Citation `mahesh_better_2025' on page 5 undefined on input line 15.
+
+
 
 [5]
+
+Package natbib Warning: Citation `ahlswede_treesatai_2023' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `dostalova_european_2021' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `udali_assessing_2021' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `grace_tree_2024' on page 6 undefined on input line 17.
+
+
+Package natbib Warning: Citation `wu_segcr_2025' on page 6 undefined on input line 21.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
 [6]
-<img/mtl-basics.png, id=230, 1908.12875pt x 669.50125pt>
+
+Package natbib Warning: Citation `vandenhende_multi-task_2021' on page 7 undefined on input line 30.
+
+
+LaTeX Warning: Reference `fig:mtl-basics' on page 7 undefined on input line 30.
+
+<img/mtl-basics.png, id=92, 1908.12875pt x 669.50125pt>
 File: img/mtl-basics.png Graphic file (type png)
 <use img/mtl-basics.png>
 Package pdftex.def Info: img/mtl-basics.png  used on input line 34.
 (pdftex.def)             Requested size: 376.42575pt x 132.06926pt.
 
+Package natbib Warning: Citation `vandenhende_multi-task_2021' on page 7 undefined on input line 35.
+
+
+Package natbib Warning: Citation `misra_cross-stitch_2016' on page 7 undefined on input line 41.
+
+
 
 [7]
 
+Package natbib Warning: Citation `plotnikov_multitask_2025' on page 8 undefined on input line 47.
+
+
+
 [8 <./img/mtl-basics.png>]
-<img/mtl-rs-model.png, id=263, 1899.095pt x 581.17125pt>
+
+Package natbib Warning: Citation `cui_mtscd-net_2023' on page 9 undefined on input line 49.
+
+
+Package natbib Warning: Citation `tao_multi-task_2025' on page 9 undefined on input line 49.
+
+
+Package natbib Warning: Citation `shen_learning_2025' on page 9 undefined on input line 49.
+
+
+Package natbib Warning: Citation `liu_associatively_2022' on page 9 undefined on input line 49.
+
+
+Package natbib Warning: Citation `chhapariya_multitask_2024' on page 9 undefined on input line 51.
+
+
+LaTeX Warning: Reference `fig:mtl-rs-model' on page 9 undefined on input line 51.
+
+<img/mtl-rs-model.png, id=107, 1899.095pt x 581.17125pt>
 File: img/mtl-rs-model.png Graphic file (type png)
 <use img/mtl-rs-model.png>
 Package pdftex.def Info: img/mtl-rs-model.png  used on input line 55.
 (pdftex.def)             Requested size: 397.3397pt x 121.59729pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package natbib Warning: Citation `chhapariya_multitask_2024' on page 9 undefined on input line 56.
+
+
+Package natbib Warning: Citation `mottus_taiga_2022' on page 9 undefined on input line 60.
 
 
 
-[9]
+[9 <./img/mtl-rs-model.png>]
 
-[10 <./img/mtl-rs-model.png>]
+Package natbib Warning: Citation `la_rosa_multi-task_2021' on page 10 undefined on input line 62.
+
+
+Package natbib Warning: Citation `lyu_deep_2025' on page 10 undefined on input line 68.
+
+
+
+[10]
+
+Package natbib Warning: Citation `potapov_mapping_2021' on page 11 undefined on input line 106.
+
+
+Package natbib Warning: Citation `lang_high-resolution_2023' on page 11 undefined on input line 106.
+
+
+Package natbib Warning: Citation `tolan_very_2024' on page 11 undefined on input line 106.
+
+
 
 [11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+Package natbib Warning: Citation `aussenac_diameter_2023' on page 12 undefined on input line 109.
+
+
+Package natbib Warning: Citation `andrea_nascetti_biomassters_nodate' on page 12 undefined on input line 109.
+
+
+Package natbib Warning: Citation `troles_bamforests_2024' on page 12 undefined on input line 109.
+
+
+Package natbib Warning: Citation `tebaldini_tomosense_2023' on page 12 undefined on input line 109.
+
+
+Package natbib Warning: Citation `weinstein_remote_2021' on page 12 undefined on input line 109.
+
+
+Package natbib Warning: Citation `dubois-fernandez_tropisar_2012' on page 12 undefined on input line 109.
+
+
+Package natbib Warning: Citation `fatoyinbo_nasa_2021' on page 12 undefined on input line 109.
+
+
+Package natbib Warning: Citation `bountos_fomo_2025' on page 12 undefined on input line 109.
 
 
 
 [12]) (./chapters/chapter3.tex
-Underfull \vbox (badness 2005) has occurred while \output is active []
-
-
 
 [13]
 
-[14]
+[14
+
+]
 chapter 3.
 
+LaTeX Warning: Reference `sec:treesat_chm_dataset' on page 15 undefined on input line 4.
 
-[15
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: Reference `sec:treesat_models' on page 15 undefined on input line 4.
 
 
+LaTeX Warning: Reference `sec:imaestro_dataset' on page 15 undefined on input line 4.
 
-[16]
-<./img/data-insight/dtm_dsm_chm.png, id=381, 867.24pt x 578.16pt>
-File: ./img/data-insight/dtm_dsm_chm.png Graphic file (type png)
-<use ./img/data-insight/dtm_dsm_chm.png>
-Package pdftex.def Info: ./img/data-insight/dtm_dsm_chm.png  used on input line 59.
-(pdftex.def)             Requested size: 334.60422pt x 223.07307pt.
 
+LaTeX Warning: Reference `sec:imaestro_models' on page 15 undefined on input line 4.
 
-[17]
-<./img/data-insight/chm_lgln_meta.png, id=404, 1612.0225pt x 740.7675pt>
-File: ./img/data-insight/chm_lgln_meta.png Graphic file (type png)
-<use ./img/data-insight/chm_lgln_meta.png>
-Package pdftex.def Info: ./img/data-insight/chm_lgln_meta.png  used on input line 76.
-(pdftex.def)             Requested size: 204.9466pt x 94.17815pt.
-<./img/data-insight/chm_lgln_eth.png, id=405, 1726.45pt x 803.0pt>
-File: ./img/data-insight/chm_lgln_eth.png Graphic file (type png)
-<use ./img/data-insight/chm_lgln_eth.png>
-Package pdftex.def Info: ./img/data-insight/chm_lgln_eth.png  used on input line 78.
-(pdftex.def)             Requested size: 204.9466pt x 95.31435pt.
 
+Package natbib Warning: Citation `ahlswede_treesatai_2023' on page 15 undefined on input line 9.
 
-[18 <./img/data-insight/dtm_dsm_chm.png>]
-<./img/training-data-insight/histograms_train_val_test60m.png, id=420, 1156.32pt x 505.89pt>
-File: ./img/training-data-insight/histograms_train_val_test60m.png Graphic file (type png)
-<use ./img/training-data-insight/histograms_train_val_test60m.png>
-Package pdftex.def Info: ./img/training-data-insight/histograms_train_val_test60m.png  used on input line 92.
-(pdftex.def)             Requested size: 376.42575pt x 164.68246pt.
 
+Package natbib Warning: Citation `ahlswede_treesatai_2023' on page 15 undefined on input line 11.
 
-[19 <./img/data-insight/chm_lgln_meta.png> <./img/data-insight/chm_lgln_eth.png> <./img/training-data-insight/histograms_train_val_test60m.png>]
-<./img/training-data-insight/class_distribution_60m.png, id=432, 1877.0125pt x 722.7pt>
-File: ./img/training-data-insight/class_distribution_60m.png Graphic file (type png)
-<use ./img/training-data-insight/class_distribution_60m.png>
-Package pdftex.def Info: ./img/training-data-insight/class_distribution_60m.png  used on input line 113.
-(pdftex.def)             Requested size: 376.42575pt x 144.93442pt.
 
 
-[20]
-<./img/training-data-insight/sample_grid_60m.png, id=446, 925.056pt x 650.43pt>
-File: ./img/training-data-insight/sample_grid_60m.png Graphic file (type png)
-<use ./img/training-data-insight/sample_grid_60m.png>
-Package pdftex.def Info: ./img/training-data-insight/sample_grid_60m.png  used on input line 134.
-(pdftex.def)             Requested size: 334.60422pt x 235.26619pt.
-<./img/training-data-insight/chm_histograms_by_class_train_val_test_60m.png, id=447, 1084.05pt x 519.3804pt>
-File: ./img/training-data-insight/chm_histograms_by_class_train_val_test_60m.png Graphic file (type png)
-<use ./img/training-data-insight/chm_histograms_by_class_train_val_test_60m.png>
-Package pdftex.def Info: ./img/training-data-insight/chm_histograms_by_class_train_val_test_60m.png  used on input line 141.
-(pdftex.def)             Requested size: 376.42575pt x 180.35141pt.
+[15]
 
-
-[21 <./img/training-data-insight/class_distribution_60m.png>]
-
-[22 <./img/training-data-insight/sample_grid_60m.png> <./img/training-data-insight/chm_histograms_by_class_train_val_test_60m.png>]
-Underfull \vbox (badness 3396) has occurred while \output is active []
-
-
-
-[23]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[24]
-<./img/treesat-model.png, id=486, 986.68625pt x 551.05875pt>
-File: ./img/treesat-model.png Graphic file (type png)
-<use ./img/treesat-model.png>
-Package pdftex.def Info: ./img/treesat-model.png  used on input line 193.
-(pdftex.def)             Requested size: 397.3397pt x 221.91629pt.
-
-
-[25]
-
-[26 <./img/treesat-model.png>]
-
-[27]
-Underfull \vbox (badness 2846) has occurred while \output is active []
-
-
-
-[28]
-
-[29]
-<./img/imaestro-data/height_hist_per_genus_across_sites.png, id=549, 860.013pt x 702.4644pt>
-File: ./img/imaestro-data/height_hist_per_genus_across_sites.png Graphic file (type png)
-<use ./img/imaestro-data/height_hist_per_genus_across_sites.png>
-Package pdftex.def Info: ./img/imaestro-data/height_hist_per_genus_across_sites.png  used on input line 276.
-(pdftex.def)             Requested size: 204.9466pt x 167.3944pt.
-<./img/imaestro-data/biomass_hist_per_genus_across_sites.png, id=550, 860.013pt x 702.4644pt>
-File: ./img/imaestro-data/biomass_hist_per_genus_across_sites.png Graphic file (type png)
-<use ./img/imaestro-data/biomass_hist_per_genus_across_sites.png>
-Package pdftex.def Info: ./img/imaestro-data/biomass_hist_per_genus_across_sites.png  used on input line 278.
-(pdftex.def)             Requested size: 204.9466pt x 167.3944pt.
-<./img/imaestro-data/genus_distribution.png, id=551, 714.7503pt x 426.393pt>
-File: ./img/imaestro-data/genus_distribution.png Graphic file (type png)
-<use ./img/imaestro-data/genus_distribution.png>
-Package pdftex.def Info: ./img/imaestro-data/genus_distribution.png  used on input line 285.
-(pdftex.def)             Requested size: 376.42575pt x 224.56885pt.
-
-
-[30 <./img/imaestro-data/height_hist_per_genus_across_sites.png> <./img/imaestro-data/biomass_hist_per_genus_across_sites.png>]
-Underfull \vbox (badness 1546) has occurred while \output is active []
-
-
-
-[31 <./img/imaestro-data/genus_distribution.png>]
-Overfull \hbox (23.69267pt too wide) in paragraph at lines 316--317
-[]\T1/cmr/m/n/10.95 Terrain cor-rec-ti-on is ap-p-lied using Range--Doppler or-tho-rec-ti-fi-ca-ti-on with SRTM $\OT1/cmr/m/n/10.95 1$$[]$
- []
-
-
-
-[32]
-
-[33]
-<./img/imaestro-data/bauges_blocks.png, id=590, 597.432pt x 597.432pt>
-File: ./img/imaestro-data/bauges_blocks.png Graphic file (type png)
-<use ./img/imaestro-data/bauges_blocks.png>
-Package pdftex.def Info: ./img/imaestro-data/bauges_blocks.png  used on input line 358.
-(pdftex.def)             Requested size: 133.84424pt x 133.84209pt.
-<./img/imaestro-data/milicz_blocks.png, id=591, 597.432pt x 597.432pt>
-File: ./img/imaestro-data/milicz_blocks.png Graphic file (type png)
-<use ./img/imaestro-data/milicz_blocks.png>
-Package pdftex.def Info: ./img/imaestro-data/milicz_blocks.png  used on input line 360.
-(pdftex.def)             Requested size: 133.84424pt x 133.84209pt.
-<./img/imaestro-data/sneznik_blocks.png, id=592, 597.432pt x 597.432pt>
-File: ./img/imaestro-data/sneznik_blocks.png Graphic file (type png)
-<use ./img/imaestro-data/sneznik_blocks.png>
-Package pdftex.def Info: ./img/imaestro-data/sneznik_blocks.png  used on input line 362.
-(pdftex.def)             Requested size: 133.84424pt x 133.84209pt.
-<./img/imaestro-data/sample_patches.png, id=593, 850.1361pt x 426.1521pt>
-File: ./img/imaestro-data/sample_patches.png Graphic file (type png)
-<use ./img/imaestro-data/sample_patches.png>
-Package pdftex.def Info: ./img/imaestro-data/sample_patches.png  used on input line 369.
-(pdftex.def)             Requested size: 418.25368pt x 209.66168pt.
-<./img/imaestro-data/genus_split_distribution_patch_level.png, id=594, 714.7503pt x 280.8894pt>
-File: ./img/imaestro-data/genus_split_distribution_patch_level.png Graphic file (type png)
-<use ./img/imaestro-data/genus_split_distribution_patch_level.png>
-Package pdftex.def Info: ./img/imaestro-data/genus_split_distribution_patch_level.png  used on input line 376.
-(pdftex.def)             Requested size: 376.42575pt x 147.93631pt.
-<./img/imaestro-data/height_biomass_hist_split.png, id=595, 570.2103pt x 426.6339pt>
-File: ./img/imaestro-data/height_biomass_hist_split.png Graphic file (type png)
-<use ./img/imaestro-data/height_biomass_hist_split.png>
-Package pdftex.def Info: ./img/imaestro-data/height_biomass_hist_split.png  used on input line 383.
-(pdftex.def)             Requested size: 292.77629pt x 219.06465pt.
-<./img/imaestro-data/all_sites_rasters.png, id=596, 895.1844pt x 533.5935pt>
-File: ./img/imaestro-data/all_sites_rasters.png Graphic file (type png)
-<use ./img/imaestro-data/all_sites_rasters.png>
-Package pdftex.def Info: ./img/imaestro-data/all_sites_rasters.png  used on input line 390.
-(pdftex.def)             Requested size: 418.25368pt x 249.31528pt.
-
-
-[34]
-
-[35 <./img/imaestro-data/bauges_blocks.png> <./img/imaestro-data/milicz_blocks.png> <./img/imaestro-data/sneznik_blocks.png> <./img/imaestro-data/sample_patches.png>]
-
-[36 <./img/imaestro-data/genus_split_distribution_patch_level.png> <./img/imaestro-data/height_biomass_hist_split.png>]
-
-[37 <./img/imaestro-data/all_sites_rasters.png>]
-
-[38]
-
-[39]
-<./img/imaestro-model.png, id=643, 1032.85875pt x 784.9325pt>
-File: ./img/imaestro-model.png Graphic file (type png)
-<use ./img/imaestro-model.png>
-Package pdftex.def Info: ./img/imaestro-model.png  used on input line 430.
-(pdftex.def)             Requested size: 397.3397pt x 301.9544pt.
-
-
-[40 <./img/imaestro-model.png>]
-
-[41]) (./chapters/chapter4.tex
-
-[42]
-chapter 4.
-
-Overfull \hbox (10.04031pt too wide) in paragraph at lines 26--27
-[] []\T1/cmss/bx/n/10.95 Classification Loss[][] \T1/cmr/m/n/10.95 The clas-si-fi-ca-ti-on task uses BCE-With-Lo-gits-Loss (bi-na-ry cross-entropy
- []
-
-
-
-[43
-
-]
-
-[44]
-
-[45]
-
-[46]
-
-[47]
-<./img/training-results/treesatai/chm-samples.png, id=733, 1493.58pt x 741.77126pt>
-File: ./img/training-results/treesatai/chm-samples.png Graphic file (type png)
-<use ./img/training-results/treesatai/chm-samples.png>
-Package pdftex.def Info: ./img/training-results/treesatai/chm-samples.png  used on input line 166.
-(pdftex.def)             Requested size: 259.31523pt x 128.78192pt.
-<./img/training-results/treesatai/chm-scatter-plot.png, id=734, 531.9875pt x 541.02126pt>
-File: ./img/training-results/treesatai/chm-scatter-plot.png Graphic file (type png)
-<use ./img/training-results/treesatai/chm-scatter-plot.png>
-Package pdftex.def Info: ./img/training-results/treesatai/chm-scatter-plot.png  used on input line 168.
-(pdftex.def)             Requested size: 133.84424pt x 136.11353pt.
-<./img/training-results/treesatai/gradient-encoder.png, id=737, 691.58376pt x 391.4625pt>
-File: ./img/training-results/treesatai/gradient-encoder.png Graphic file (type png)
-<use ./img/training-results/treesatai/gradient-encoder.png>
-Package pdftex.def Info: ./img/training-results/treesatai/gradient-encoder.png  used on input line 179.
-(pdftex.def)             Requested size: 292.77629pt x 165.72125pt.
-
-Underfull \vbox (badness 5681) has occurred while \output is active []
-
-
-
-[48 <./img/training-results/treesatai/chm-samples.png> <./img/training-results/treesatai/chm-scatter-plot.png>]
-
-[49 <./img/training-results/treesatai/gradient-encoder.png>]
-Overfull \hbox (4.2708pt too wide) in paragraph at lines 205--214
- [][] 
- []
-
-
-
-[50]
-
-[51]
-
-[52]
-
-[53]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[54]
-<./img/training-results/imaestro-mtl/mtl-all-tasks-samples.png, id=815, 1153.30875pt x 771.88374pt>
-File: ./img/training-results/imaestro-mtl/mtl-all-tasks-samples.png Graphic file (type png)
-<use ./img/training-results/imaestro-mtl/mtl-all-tasks-samples.png>
-Package pdftex.def Info: ./img/training-results/imaestro-mtl/mtl-all-tasks-samples.png  used on input line 392.
-(pdftex.def)             Requested size: 376.42575pt x 251.93103pt.
-<./img/training-results/imaestro-mtl/height-biomass-scatter-plot.png, id=816, 1192.455pt x 491.8375pt>
-File: ./img/training-results/imaestro-mtl/height-biomass-scatter-plot.png Graphic file (type png)
-<use ./img/training-results/imaestro-mtl/height-biomass-scatter-plot.png>
-Package pdftex.def Info: ./img/training-results/imaestro-mtl/height-biomass-scatter-plot.png  used on input line 399.
-(pdftex.def)             Requested size: 376.42575pt x 155.25984pt.
-
-
-[55]
-
-[56 <./img/training-results/imaestro-mtl/mtl-all-tasks-samples.png> <./img/training-results/imaestro-mtl/height-biomass-scatter-plot.png>]
-<./img/training-results/imaestro-mtl/gradient-comparison.png, id=835, 992.70876pt x 592.2125pt>
-File: ./img/training-results/imaestro-mtl/gradient-comparison.png Graphic file (type png)
-<use ./img/training-results/imaestro-mtl/gradient-comparison.png>
-Package pdftex.def Info: ./img/training-results/imaestro-mtl/gradient-comparison.png  used on input line 412.
-(pdftex.def)             Requested size: 292.77629pt x 174.65599pt.
-
-
-[57 <./img/training-results/imaestro-mtl/gradient-comparison.png>]
-<./img/training-results/imaestro-mtl/cka.png, id=844, 1183.42125pt x 310.15875pt>
-File: ./img/training-results/imaestro-mtl/cka.png Graphic file (type png)
-<use ./img/training-results/imaestro-mtl/cka.png>
-Package pdftex.def Info: ./img/training-results/imaestro-mtl/cka.png  used on input line 427.
-(pdftex.def)             Requested size: 418.25368pt x 109.6173pt.
-<./img/training-results/imaestro-mtl/representations-across-layers.png, id=845, 1315.91624pt x 798.985pt>
-File: ./img/training-results/imaestro-mtl/representations-across-layers.png Graphic file (type png)
-<use ./img/training-results/imaestro-mtl/representations-across-layers.png>
-Package pdftex.def Info: ./img/training-results/imaestro-mtl/representations-across-layers.png  used on input line 440.
-(pdftex.def)             Requested size: 418.25368pt x 253.94922pt.
-
-
-[58 <./img/training-results/imaestro-mtl/cka.png>]
-
-[59 <./img/training-results/imaestro-mtl/representations-across-layers.png>]) (./chapters/chapter5.tex
-
-[60]
-chapter 5.
-
-Overfull \hbox (0.68346pt too wide) in paragraph at lines 4--5
-\T1/cmr/m/n/10.95 Chap-ter []1[]. The ex-pe-ri-ments tes-ted mul-ti-task lear-ning for fo-rest mo-ni-to-ring using Sentinel-
- []
-
-
-
-[61
-
-]
-
-[62]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-[63]
-
-[64]) (./main.bbl
-
-[65]
-
-[66
-
-]
-chapter without number
-
-
-[67]
-
-[68]
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
-[]\T1/cmr/m/n/10.95 Landesamt für Geo-in-for-ma-ti-on und Lan-des-ver-mes-sung Nie-der-sach-sen
- []
-
-
-Underfull \hbox (badness 4940) in paragraph at lines 133--136
-\T1/cmr/m/n/10.95 (LGLN).  Di-gi-ta-les Ober-flä-chen-mo-dell (DOM1), No-vem-ber 2025a.  URL
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--136
-[]$\T1/cmtt/m/n/10.95 https : / / ni-[]lgln-[]opengeodata . hub . arcgis . com / apps / lgln-[]opengeodata ::
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 138--141
-\T1/cmtt/m/n/10.95 hub . arcgis . com / apps / lgln-[]opengeodata :: digitales-[]gelÃ¤ndemodell-[]dgm1 /
- []
-
-
-
-[69]
-
-[70]
-
-[71]
-
-[72])
-
-[73]
-
-[74
-
-
-] (./main.aux (./misc/self-assertion.aux) (./chapters/abstract.aux))
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
- ***********
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
- ) 
-Here is how much of TeX's memory you used:
- 36430 strings out of 474589
- 776347 string characters out of 5749386
- 1278039 words of memory out of 5000000
- 58577 multiletter control sequences out of 15000+600000
- 583564 words of font info for 91 fonts, out of 8000000 for 9000
- 364 hyphenation exceptions out of 8191
- 108i,20n,107p,10962b,1364s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfbx0900.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfsl1095.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (82 pages, 25327996 bytes).
-PDF statistics:
- 1319 PDF objects out of 1440 (max. 8388607)
- 1104 compressed objects within 12 object streams
- 356 named destinations out of 1000 (max. 500000)
- 459 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Package natbib Warning: Citation `landesamt_fur_geoinformation_und_landesvermessung_
