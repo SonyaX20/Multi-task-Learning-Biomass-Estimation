@@ -4,20 +4,7 @@
 [![GDAL](https://img.shields.io/badge/GDAL-3.0+-green.svg)](https://gdal.org/)
 
 > **TL;DR:** Complete data pipeline that generates Canopy Height Model (CHM) from official German LiDAR elevation data (DTM/DSM), validates against global products, and extends TreeSatAI with height labels for multi-task learning. Produces ready-to-use Sentinel-1 + CHM NumPy tensors for deep learning. **Related thesis chapter:** This is the implementation behind **Chapter 3 (Methodology)** of the thesis.
-
---- 
-
-<p align="center">
-  <img src="../@plots/data-insight/dtm_dsm_chm.png" width="400" alt="CHM Generation"/>
-  <br>
-  <em>Canopy Height Model generation from DTM (Digital Terrain Model) and DSM (Digital Surface Model) LiDAR products. The CHM is computed as DSM - DTM and validated against ETH Global Canopy Height (10m) and Meta Global Canopy Height (1m) products.</em>
-</p>
-
-<p align="center">
-  <img src="../@plots/training-data-insight/sample_grid_60m.png" width="400" alt="Dataset Samples"/>
-  <br>
-  <em>Example training patches showing the four input channels (VV backscatter, VH backscatter, VV/VH ratio, and derived CHM) across train, validation, and test splits. Forest areas exhibit higher VH backscatter and positive CHM values, while clearings show lower backscatter and near-zero CHM.</em>
-</p>
+---
 
 ## 1. What this does
 

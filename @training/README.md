@@ -101,10 +101,10 @@ Shared Encoder: 6×6 → 3×3 → 1×1
 
 | Parameter | Value | Notes |
 |-----------|-------|-------|
-| **Optimizer** | AdamW | β₁=0.9, β₂=0.999 |
+| **Optimizer** | AdamW | - |
 | **Learning rate** | 1e-4 | With warmup (1e-5 → 1e-4) |
 | **Scheduler** | CosineAnnealingLR | T_max = epochs |
-| **Batch size** | 32 | Limited by GPU memory |
+| **Batch size** | 32 | - |
 | **Epochs** | 100 | With early stopping (patience=10) |
 | **Weight decay** | 1e-4 | L2 regularization |
 
@@ -149,11 +149,11 @@ where σ²_cls and σ²_reg are learnable uncertainty parameters.
 
 ### Key Outcomes
 
-✅ **Multi-task learning achieves comparable performance** to single-task baselines while using a single shared encoder (50% parameter reduction)
+**Multi-task learning achieves comparable performance** to single-task baselines while using a single shared encoder (50% parameter reduction)
 
-✅ **Gradient analysis shows positive task alignment** in early encoder layers (cosine similarity 0.3-0.6), suggesting compatible feature learning
+**Gradient analysis shows positive task alignment** in early encoder layers (cosine similarity 0.3-0.6), suggesting compatible feature learning
 
-✅ **Uncertainty weighting converges to reasonable balance** (σ²_cls ≈ 0.8, σ²_reg ≈ 1.2), automatically handling loss scale differences
+**Uncertainty weighting converges to reasonable balance** (σ²_cls ≈ 0.8, σ²_reg ≈ 1.2), automatically handling loss scale differences
 
 **Absolute performance is moderate** due to:
 - Small patch size (6×6 pixels) limits spatial context
