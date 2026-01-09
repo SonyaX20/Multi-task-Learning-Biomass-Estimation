@@ -1,0 +1,103 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Theoretical Background}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}SAR Imagery for Forest Parameter Estimation}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Multitask Learning in Remote Sensing}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Deep Learning Architectures for Multitask Learning}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Multitask Learning for Forest Monitoring}{8}{subsection.2.2.2}%
+\contentsline {subsubsection}{\nonumberline Motivation for Forest Parameter Extraction}{10}{subsubsection*.7}%
+\contentsline {section}{\numberline {2.3}Dataset Availability in Forest Monitoring}{11}{section.2.3}%
+\contentsline {subsubsection}{\nonumberline Additional Datasets.}{13}{subsubsection*.10}%
+\contentsline {subsubsection}{\nonumberline Motivation for Dataset Extension.}{13}{subsubsection*.12}%
+\contentsline {chapter}{\numberline {3}Methodology}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}TreeSatAI-CHM Dataset}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Canopy Height Model Generation}{16}{subsection.3.1.1}%
+\contentsline {subsubsection}{\nonumberline Elevation Data Sources}{16}{subsubsection*.14}%
+\contentsline {subsubsection}{\nonumberline Generation Procedure}{17}{subsubsection*.18}%
+\contentsline {paragraph}{\nonumberline 1) Tile Selection and Download}{17}{paragraph*.20}%
+\contentsline {paragraph}{\nonumberline 2) Nodata Interpolation}{17}{paragraph*.22}%
+\contentsline {paragraph}{\nonumberline 3) CHM Computation and Quality Control}{17}{paragraph*.24}%
+\contentsline {paragraph}{\nonumberline 4) Reprojection and Alignment}{17}{paragraph*.27}%
+\contentsline {paragraph}{\nonumberline 5) Validation Against Global Canopy Height Products}{18}{paragraph*.29}%
+\contentsline {subsection}{\numberline {3.1.2}Data Preprocessing}{19}{subsection.3.1.2}%
+\contentsline {subsubsection}{\nonumberline 1) Label Filtering}{19}{subsubsection*.33}%
+\contentsline {subsubsection}{\nonumberline 2) Data Splitting Strategy}{20}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline 3) Class Weighting}{20}{subsubsection*.38}%
+\contentsline {section}{\numberline {3.2}Model Architectures for TreeSatAI-CHM}{21}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Baseline Models}{23}{subsection.3.2.1}%
+\contentsline {subsubsection}{\nonumberline Multilayer Perceptron Baseline}{23}{subsubsection*.42}%
+\contentsline {subsubsection}{\nonumberline U-Net Baseline}{24}{subsubsection*.44}%
+\contentsline {subsection}{\numberline {3.2.2}Multitask Learning Architecture}{25}{subsection.3.2.2}%
+\contentsline {subsubsection}{\nonumberline Architecture Design}{25}{subsubsection*.46}%
+\contentsline {subsubsection}{\nonumberline Loss Function Design}{25}{subsubsection*.49}%
+\contentsline {subparagraph}{\nonumberline Loss Normalisation}{25}{subparagraph*.51}%
+\contentsline {subparagraph}{\nonumberline Task Weighting Strategies}{27}{subparagraph*.53}%
+\contentsline {subsubsection}{\nonumberline Gradient Analysis}{28}{subsubsection*.55}%
+\contentsline {section}{\numberline {3.3}iMAESTRO Dataset}{28}{section.3.3}%
+\contentsline {paragraph}{\nonumberline Overview}{28}{paragraph*.57}%
+\contentsline {subsection}{\numberline {3.3.1}Processing Raw iMAESTRO Data}{29}{subsection.3.3.1}%
+\contentsline {subsubsection}{\nonumberline 1) Deriving Reference Labels}{29}{subsubsection*.59}%
+\contentsline {subsubsection}{\nonumberline 2) Aggregating Cell-Level Data}{29}{subsubsection*.61}%
+\contentsline {subsubsection}{\nonumberline 3) Generating Raster Data}{30}{subsubsection*.65}%
+\contentsline {subsection}{\numberline {3.3.2}Processing Sentinel-1 GRD Data}{32}{subsection.3.3.2}%
+\contentsline {paragraph}{\nonumberline SAR Data Selection}{32}{paragraph*.67}%
+\contentsline {paragraph}{\nonumberline Radiometric and Geometric Correction}{32}{paragraph*.69}%
+\contentsline {paragraph}{\nonumberline Resampling and Logarithmic Scaling}{32}{paragraph*.71}%
+\contentsline {subsection}{\numberline {3.3.3}Preparing Training Data}{33}{subsection.3.3.3}%
+\contentsline {subsubsection}{\nonumberline 1) Multi-Channel Data Stacking}{33}{subsubsection*.73}%
+\contentsline {subsubsection}{\nonumberline 2) Patch Extraction with Spatial Blocking}{33}{subsubsection*.75}%
+\contentsline {subsubsection}{\nonumberline 3) Train--Validation--Test Splitting}{34}{subsubsection*.77}%
+\contentsline {paragraph}{\nonumberline Trade-offs and Limitations}{34}{paragraph*.79}%
+\contentsline {section}{\numberline {3.4}Model Architectures for iMAESTRO}{34}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Single-Task Baseline Models}{38}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Multi-Task Learning Model}{39}{subsection.3.4.2}%
+\contentsline {subsubsection}{\nonumberline Architecture Design}{39}{subsubsection*.86}%
+\contentsline {subsubsection}{\nonumberline Uncertainty Loss}{40}{subsubsection*.89}%
+\contentsline {subsubsection}{\nonumberline Allometric Constraint Integration}{41}{subsubsection*.91}%
+\contentsline {chapter}{\numberline {4}Experiments and Results}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}TreeSatAI-CHM Dataset Experiments}{43}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Single-Task Baseline Experiments}{43}{subsection.4.1.1}%
+\contentsline {subsubsection}{\nonumberline Experimental Setup}{43}{subsubsection*.93}%
+\contentsline {paragraph}{\nonumberline Classification Loss}{44}{paragraph*.95}%
+\contentsline {paragraph}{\nonumberline Regression Loss}{44}{paragraph*.97}%
+\contentsline {subsubsection}{\nonumberline Classification Results}{44}{subsubsection*.99}%
+\contentsline {subsubsection}{\nonumberline Regression Results}{45}{subsubsection*.102}%
+\contentsline {subsubsection}{\nonumberline Analysis}{45}{subsubsection*.105}%
+\contentsline {paragraph}{\nonumberline 1) MLP Performance Aligns with TreeSatAI Benchmark}{45}{paragraph*.107}%
+\contentsline {paragraph}{\nonumberline 2) U-Net Preserves Spatial Information}{45}{paragraph*.109}%
+\contentsline {paragraph}{\nonumberline 3) Data Quality Validation}{46}{paragraph*.111}%
+\contentsline {paragraph}{\nonumberline 4) Implications for Multitask Learning}{46}{paragraph*.113}%
+\contentsline {subsection}{\numberline {4.1.2}Multitask Learning Experiments}{46}{subsection.4.1.2}%
+\contentsline {subsubsection}{\nonumberline Experimental Setup}{46}{subsubsection*.115}%
+\contentsline {paragraph}{\nonumberline Loss Scale Mismatch and Training Challenges}{46}{paragraph*.117}%
+\contentsline {subsubsection}{\nonumberline Results and Analysis}{47}{subsubsection*.119}%
+\contentsline {subsubsection}{\nonumberline Gradient Analysis}{48}{subsubsection*.123}%
+\contentsline {paragraph}{\nonumberline 1) Early Encoder Layers (enc1)}{49}{paragraph*.126}%
+\contentsline {paragraph}{\nonumberline 2) Middle Encoder Layers (enc2)}{49}{paragraph*.128}%
+\contentsline {paragraph}{\nonumberline 3) Bottleneck}{49}{paragraph*.130}%
+\contentsline {subsection}{\numberline {4.1.3}Ablation Study: Alternative Parameter Sharing Strategies}{50}{subsection.4.1.3}%
+\contentsline {subsubsection}{\nonumberline Qualitative Comparison of Architectures}{50}{subsubsection*.132}%
+\contentsline {paragraph}{\nonumberline Hard Parameter Sharing (MultiTaskUNet)}{50}{paragraph*.135}%
+\contentsline {paragraph}{\nonumberline Cross-Stitch Networks}{50}{paragraph*.137}%
+\contentsline {paragraph}{\nonumberline Cross-Task Attention}{51}{paragraph*.139}%
+\contentsline {subsubsection}{\nonumberline Results and Analysis}{51}{subsubsection*.141}%
+\contentsline {paragraph}{\nonumberline Cross-Stitch Networks}{51}{paragraph*.144}%
+\contentsline {paragraph}{\nonumberline Cross-Task Attention}{52}{paragraph*.146}%
+\contentsline {subsection}{\numberline {4.1.4}Summary}{52}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}iMAESTRO Dataset Experiments}{53}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Single-Task Baseline Experiments}{53}{subsection.4.2.1}%
+\contentsline {subsubsection}{\nonumberline Experimental Setup}{53}{subsubsection*.148}%
+\contentsline {subsubsection}{\nonumberline Results}{54}{subsubsection*.150}%
+\contentsline {subsection}{\numberline {4.2.2}Multitask Learning with Allometric Constraints}{55}{subsection.4.2.2}%
+\contentsline {subsubsection}{\nonumberline Experimental Setup}{55}{subsubsection*.153}%
+\contentsline {subsubsection}{\nonumberline Results and Analysis}{55}{subsubsection*.155}%
+\contentsline {subsection}{\numberline {4.2.3}Gradient and Representation Analysis}{57}{subsection.4.2.3}%
+\contentsline {subsubsection}{\nonumberline Gradient Alignment in the Shared Encoder}{57}{subsubsection*.160}%
+\contentsline {subsubsection}{\nonumberline Feature Similarity Across Decoder Layers}{58}{subsubsection*.163}%
+\contentsline {subsection}{\numberline {4.2.4}Summary}{58}{subsection.4.2.4}%
+\contentsline {chapter}{\numberline {5}Discussion and Conclusion}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Answering the Research Questions}{61}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Key Takeaways}{62}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Looking Forward}{64}{section.5.3}%
+\contentsline {chapter}{\nonumberline References}{67}{chapter*.166}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

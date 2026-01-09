@@ -1,306 +1,356 @@
-\begin{thebibliography}{59}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Ahlswede et~al.(2023)]{ahlswede2023treesatai}
-S.~Ahlswede et~al.
-\newblock Treesatai benchmark archive: A multi-sensor, multi-label dataset for tree species classification in remote sensing.
-\newblock \emph{Earth System Science Data}, 15:\penalty0 681--706, 2023.
+\bibitem[Ahlswede et~al.(2023)Ahlswede, Schulz, Gava, Helber, Bischke, Förster, Arias, Hees, Demir, and Kleinschmit]{ahlswede_treesatai_2023}
+Steve Ahlswede, Christian Schulz, Christiano Gava, Patrick Helber, Benjamin Bischke, Michael Förster, Florencia Arias, Jörn Hees, Begüm Demir, and Birgit Kleinschmit.
+\newblock \textit{{TreeSatAI} {Benchmark} {Archive}}: a multi-sensor, multi-label dataset for tree species classification in remote sensing.
+\newblock \emph{Earth System Science Data}, 15\penalty0 (2):\penalty0 681--695, February 2023.
+\newblock ISSN 1866-3508.
+\newblock \doi{10.5194/essd-15-681-2023}.
+\newblock URL \url{https://essd.copernicus.org/articles/15/681/2023/}.
 
-\bibitem[Bai et~al.(2024)]{bai2024coherence}
-Y.~Bai et~al.
-\newblock Coherence-based forest monitoring with sentinel-1.
-\newblock \emph{Remote Sensing of Environment}, 300:\penalty0 113891, 2024.
+\bibitem[{Andrea Nascetti}()]{andrea_nascetti_biomassters_nodate}
+{Andrea Nascetti}.
+\newblock {BioMassters}.
+\newblock URL \url{https://huggingface.co/datasets/nascetti-a/BioMassters}.
 
-\bibitem[Balmahesh et~al.(2021)]{balmahesh2021forest}
-B.~Balmahesh et~al.
-\newblock Forest species classification using sar data.
-\newblock \emph{Remote Sensing}, 13:\penalty0 1--20, 2021.
+\bibitem[Aussenac et~al.(2023)Aussenac, Monnet, Klopčič, Hawryło, Socha, Mahnken, Gutsch, Cordonnier, and Vallet]{aussenac_diameter_2023}
+Raphaël Aussenac, Jean-Matthieu Monnet, Matija Klopčič, Paweł Hawryło, Jarosław Socha, Mats Mahnken, Martin Gutsch, Thomas Cordonnier, and Patrick Vallet.
+\newblock Diameter, height and species of 42 million trees in three {European} landscapes generated from field data and airborne laser scanning data.
+\newblock \emph{Open Research Europe}, 3:\penalty0 32, February 2023.
+\newblock ISSN 2732-5121.
+\newblock \doi{10.12688/openreseurope.15373.1}.
+\newblock URL \url{https://open-research-europe.ec.europa.eu/articles/3-32/v1}.
 
-\bibitem[Balmahesh et~al.(2023)]{balmahesh2023forest}
-B.~Balmahesh et~al.
-\newblock Deep learning for forest parameter estimation from sar.
-\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 61:\penalty0 1--15, 2023.
+\bibitem[Bountos et~al.(2025)Bountos, Ouaknine, Papoutsis, and Rolnick]{bountos_fomo_2025}
+Nikolaos~Ioannis Bountos, Arthur Ouaknine, Ioannis Papoutsis, and David Rolnick.
+\newblock {FoMo}: {Multi}-{Modal}, {Multi}-{Scale} and {Multi}-{Task} {Remote} {Sensing} {Foundation} {Models} for {Forest} {Monitoring}, February 2025.
+\newblock URL \url{http://arxiv.org/abs/2312.10114}.
+\newblock arXiv:2312.10114.
 
-\bibitem[Bountos et~al.(2024)]{bountos2024fomobench}
-N.~I. Bountos et~al.
-\newblock Fomo-bench: A multi-modal, multi-scale and multi-task forest monitoring benchmark for remote sensing foundation models.
-\newblock \emph{arXiv preprint arXiv:2312.10114}, 2024.
+\bibitem[Castro et~al.(2024)Castro, Rogers, Sothe, Cyr, and Gonsamo]{castro_deep_2024}
+Jose~B. Castro, Cheryl Rogers, Camile Sothe, Dominic Cyr, and Alemu Gonsamo.
+\newblock A {Deep} {Learning} {Approach} to {Estimate} {Canopy} {Height} and {Uncertainty} by {Integrating} {Seasonal} {Optical}, {SAR} and {Limited} {GEDI} {LiDAR} {Data} over {Northern} {Forests}, October 2024.
+\newblock URL \url{http://arxiv.org/abs/2410.18108}.
+\newblock arXiv:2410.18108.
 
-\bibitem[Caruana(1997)]{caruana1997multitask}
-Rich Caruana.
-\newblock Multitask learning.
-\newblock \emph{Machine Learning}, 28\penalty0 (1):\penalty0 41--75, 1997.
-
-\bibitem[Castro et~al.(2024)]{castro2024canopy}
-J.~B. Castro et~al.
-\newblock A deep learning approach to estimate canopy height and uncertainty by integrating seasonal optical, sar and limited gedi lidar data over northern forests.
-\newblock \emph{arXiv preprint}, 2024.
-
-\bibitem[Chave et~al.(2005)]{chave2005tree}
-J.~Chave et~al.
-\newblock Tree allometry and improved estimation of carbon stocks and balance in tropical forests.
-\newblock \emph{Oecologia}, 145\penalty0 (1):\penalty0 87--99, 2005.
-
-\bibitem[Chave et~al.(2009)]{chave2009global}
-J.~Chave et~al.
+\bibitem[Chave et~al.(2009)Chave, Coomes, Jansen, Lewis, Swenson, and Zanne]{chave_towards_2009}
+Jerome Chave, David Coomes, Steven Jansen, Simon~L. Lewis, Nathan~G. Swenson, and Amy~E. Zanne.
 \newblock Towards a worldwide wood economics spectrum.
-\newblock \emph{Ecology Letters}, 12\penalty0 (4):\penalty0 351--366, 2009.
+\newblock \emph{Ecology Letters}, 12\penalty0 (4):\penalty0 351--366, April 2009.
+\newblock ISSN 1461-023X, 1461-0248.
+\newblock \doi{10.1111/j.1461-0248.2009.01285.x}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/10.1111/j.1461-0248.2009.01285.x}.
 
-\bibitem[Cui et~al.(2019)Cui, Jia, Lin, Song, and Belongie]{cui2019class}
-Y.~Cui, M.~Jia, T.-Y. Lin, Y.~Song, and S.~Belongie.
-\newblock Class-balanced loss based on effective number of samples.
-\newblock \emph{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 9268--9277, 2019.
+\bibitem[Chave et~al.(2014)Chave, Réjou‐Méchain, Búrquez, Chidumayo, Colgan, Delitti, Duque, Eid, Fearnside, Goodman, Henry, Martínez‐Yrízar, Mugasha, Muller‐Landau, Mencuccini, Nelson, Ngomanda, Nogueira, Ortiz‐Malavassi, Pélissier, Ploton, Ryan, Saldarriaga, and Vieilledent]{chave_improved_2014}
+Jérôme Chave, Maxime Réjou‐Méchain, Alberto Búrquez, Emmanuel Chidumayo, Matthew~S. Colgan, Welington~B.C. Delitti, Alvaro Duque, Tron Eid, Philip~M. Fearnside, Rosa~C. Goodman, Matieu Henry, Angelina Martínez‐Yrízar, Wilson~A. Mugasha, Helene~C. Muller‐Landau, Maurizio Mencuccini, Bruce~W. Nelson, Alfred Ngomanda, Euler~M. Nogueira, Edgar Ortiz‐Malavassi, Raphaël Pélissier, Pierre Ploton, Casey~M. Ryan, Juan~G. Saldarriaga, and Ghislain Vieilledent.
+\newblock Improved allometric models to estimate the aboveground biomass of tropical trees.
+\newblock \emph{Global Change Biology}, 20\penalty0 (10):\penalty0 3177--3190, October 2014.
+\newblock ISSN 1354-1013, 1365-2486.
+\newblock \doi{10.1111/gcb.12629}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/10.1111/gcb.12629}.
 
-\bibitem[Debary et~al.(2024)Debary, Fiaz, Klein, et~al.]{debary2024predictree}
-H.~Debary, M.~Fiaz, L.~Klein, et~al.
-\newblock Preditree: A multi-temporal sub-meter dataset of multi-spectral imagery aligned with canopy height maps.
-\newblock \emph{arXiv preprint arXiv:2509.01202}, 2024.
+\bibitem[Chhapariya et~al.(2024)Chhapariya, Benoit, Buddhiraju, and Kumar]{chhapariya_multitask_2024}
+Koushikey Chhapariya, Alexandre Benoit, Krishna~Mohan Buddhiraju, and Anil Kumar.
+\newblock A {Multitask} {Deep} {Learning} {Model} for {Classification} and {Regression} of {Hyperspectral} {Images}: {Application} to the large-scale dataset, July 2024.
+\newblock URL \url{http://arxiv.org/abs/2407.16384}.
+\newblock arXiv:2407.16384.
 
-\bibitem[Dost{\'a}lov{\'a} et~al.(2021)]{dostalova2021forest}
-A.~Dost{\'a}lov{\'a} et~al.
-\newblock European wide forest classification based on sentinel-1 data.
-\newblock \emph{Remote Sensing}, 13\penalty0 (3):\penalty0 337, 2021.
+\bibitem[Cui and Jiang(2023)]{cui_mtscd-net_2023}
+Fengzhi Cui and Jie Jiang.
+\newblock {MTSCD}-{Net}: {A} network based on multi-task learning for semantic change detection of bitemporal remote sensing images.
+\newblock \emph{International Journal of Applied Earth Observation and Geoinformation}, 118:\penalty0 103294, April 2023.
+\newblock ISSN 15698432.
+\newblock \doi{10.1016/j.jag.2023.103294}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S1569843223001164}.
 
-\bibitem[Du et~al.(2024)]{du2024mtcdn}
-Z.~Du et~al.
-\newblock Concatenated deep learning framework for multitask change detection of optical and sar images.
-\newblock \emph{IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing}, 17:\penalty0 719--731, 2024.
+\bibitem[Cui et~al.(2019)Cui, Jia, Lin, Song, and Belongie]{cui_class-balanced_2019}
+Yin Cui, Menglin Jia, Tsung-Yi Lin, Yang Song, and Serge Belongie.
+\newblock Class-{Balanced} {Loss} {Based} on {Effective} {Number} of {Samples}, 2019.
+\newblock URL \url{https://arxiv.org/abs/1901.05555}.
 
-\bibitem[Dubois-Fernandez et~al.(2012)]{dubois2012tropisar}
-P.~C. Dubois-Fernandez et~al.
-\newblock The tropisar airborne campaign in french guiana: Objectives, description, and observed temporal behavior of the backscatter signal.
-\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 50\penalty0 (8):\penalty0 3228--3241, 2012.
+\bibitem[Debary et~al.(2025)Debary, Fiaz, and Klein]{debary_preditree_2025}
+Hiyam Debary, Mustansar Fiaz, and Levente Klein.
+\newblock {PrediTree}: {A} {Multi}-{Temporal} {Sub}-meter {Dataset} of {Multi}-{Spectral} {Imagery} {Aligned} {With} {Canopy} {Height} {Maps}, 2025.
+\newblock URL \url{https://arxiv.org/abs/2509.01202}.
 
-\bibitem[Fatoyinbo et~al.(2018)]{fatoyinbo2018nasa}
-L.~Fatoyinbo et~al.
-\newblock The nasa afrisar campaign: Airborne sar and lidar measurements of tropical forest structure and biomass in support of current and future space missions.
-\newblock \emph{Remote Sensing of Environment}, 264:\penalty0 112533, 2018.
+\bibitem[Dostálová et~al.(2021)Dostálová, Lang, Ivanovs, Waser, and Wagner]{dostalova_european_2021}
+Alena Dostálová, Mait Lang, Janis Ivanovs, Lars~T. Waser, and Wolfgang Wagner.
+\newblock European {Wide} {Forest} {Classification} {Based} on {Sentinel}-1 {Data}.
+\newblock \emph{Remote Sensing}, 13\penalty0 (3):\penalty0 337, January 2021.
+\newblock ISSN 2072-4292.
+\newblock \doi{10.3390/rs13030337}.
+\newblock URL \url{https://www.mdpi.com/2072-4292/13/3/337}.
 
-\bibitem[Forrester et~al.(2017)]{forrester2017generalized}
-D.~I. Forrester et~al.
-\newblock Generalized biomass and leaf area allometric equations for european tree species incorporating stand structure, tree age and climate.
-\newblock \emph{Forest Ecology and Management}, 396:\penalty0 160--175, 2017.
+\bibitem[Dubois-Fernandez et~al.(2012)Dubois-Fernandez, Le~Toan, Daniel, Oriot, Chave, Blanc, Villard, Davidson, and Petit]{dubois-fernandez_tropisar_2012}
+Pascale~C. Dubois-Fernandez, Thuy Le~Toan, Sandrine Daniel, Hélène Oriot, Jerôme Chave, Lilian Blanc, Ludovic Villard, Malcolm W.~J. Davidson, and Michel Petit.
+\newblock The {TropiSAR} {Airborne} {Campaign} in {French} {Guiana}: {Objectives}, {Description}, and {Observed} {Temporal} {Behavior} of the {Backscatter} {Signal}.
+\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 50\penalty0 (8):\penalty0 3228--3241, August 2012.
+\newblock ISSN 1558-0644.
+\newblock \doi{10.1109/TGRS.2011.2180728}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/6146421}.
 
-\bibitem[Guo et~al.(2023)]{guo2023dynamic}
-M.~Guo et~al.
-\newblock Dynamic task weighting methods for multi-task learning in deep neural networks: A survey.
-\newblock \emph{arXiv preprint arXiv:2307.02518}, 2023.
+\bibitem[Fatoyinbo et~al.(2021)Fatoyinbo, Armston, Simard, Saatchi, Denbina, Lavalle, Hofton, Tang, Marselis, Pinto, Hancock, Hawkins, Duncanson, Blair, Hansen, Lou, Dubayah, Hensley, Silva, Poulsen, Labrière, Barbier, Jeffery, Kenfack, Herve, Bissiengou, Alonso, Moussavou, White, Lewis, and Hibbard]{fatoyinbo_nasa_2021}
+Temilola Fatoyinbo, John Armston, Marc Simard, Sassan Saatchi, Michael Denbina, Marco Lavalle, Michelle Hofton, Hao Tang, Suzanne Marselis, Naiara Pinto, Steven Hancock, Brian Hawkins, Laura Duncanson, Bryan Blair, Christy Hansen, Yunling Lou, Ralph Dubayah, Scott Hensley, Carlos Silva, John~R. Poulsen, Nicolas Labrière, Nicolas Barbier, Kathryn Jeffery, David Kenfack, Memiaghe Herve, Pulchérie Bissiengou, Alfonso Alonso, Ghislain Moussavou, Lee~T.J. White, Simon Lewis, and Kathleen Hibbard.
+\newblock The {NASA} {AfriSAR} campaign: {Airborne} {SAR} and lidar measurements of tropical forest structure and biomass in support of current and future space missions.
+\newblock \emph{Remote Sensing of Environment}, 264:\penalty0 112533, October 2021.
+\newblock ISSN 00344257.
+\newblock \doi{10.1016/j.rse.2021.112533}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0034425721002534}.
 
-\bibitem[Jensen(2015)]{jenson2015introductory}
-J.~R. Jensen.
-\newblock \emph{Introductory Digital Image Processing: A Remote Sensing Perspective}.
-\newblock Pearson Education, 4th edition, 2015.
+\bibitem[Forrester et~al.(2017)Forrester, Tachauer, Annighoefer, Barbeito, Pretzsch, Ruiz-Peinado, Stark, Vacchiano, Zlatanov, Chakraborty, Saha, and Sileshi]{forrester_generalized_2017}
+David~I. Forrester, I.H.H. Tachauer, Peter Annighoefer, Ignacio Barbeito, Hans Pretzsch, Ricardo Ruiz-Peinado, Hendrik Stark, Giorgio Vacchiano, Tzvetan Zlatanov, Tamalika Chakraborty, Somidh Saha, and Gudeta~W. Sileshi.
+\newblock Generalized biomass and leaf area allometric equations for {European} tree species incorporating stand structure, tree age and climate.
+\newblock \emph{Forest Ecology and Management}, 396:\penalty0 160--175, July 2017.
+\newblock ISSN 03781127.
+\newblock \doi{10.1016/j.foreco.2017.04.011}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0378112717301238}.
 
-\bibitem[Kendall et~al.(2018)Kendall, Gal, and Cipolla]{kendall2018multi}
-A.~Kendall, Y.~Gal, and R.~Cipolla.
-\newblock Multi-task learning using uncertainty to weigh losses for scene geometry and semantics.
-\newblock \emph{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, pages 7482--7491, 2018.
+\bibitem[Grace et~al.(2024)Grace, Laura, Jumpei, Karol, and Joseph]{grace_tree_2024}
+Colverd Grace, Schade Laura, Takami Jumpei, Bot Karol, and Gallego Joseph.
+\newblock Tree {Species} {Classification} using {Machine} {Learning} and {3D} {Tomographic} {SAR} -- a case study in {Northern} {Europe}.
+\newblock 2024.
+\newblock \doi{10.48550/ARXIV.2411.12897}.
+\newblock URL \url{https://arxiv.org/abs/2411.12897}.
 
-\bibitem[Lang et~al.(2023)]{lang2023canopy}
-N.~Lang et~al.
-\newblock A high-resolution canopy height model of the earth.
-\newblock \emph{Nature Ecology \& Evolution}, 7:\penalty0 1778--1789, 2023.
+\bibitem[Kendall et~al.(2017)Kendall, Gal, and Cipolla]{kendall_multi-task_2017}
+Alex Kendall, Yarin Gal, and Roberto Cipolla.
+\newblock Multi-{Task} {Learning} {Using} {Uncertainty} to {Weigh} {Losses} for {Scene} {Geometry} and {Semantics}, 2017.
+\newblock URL \url{https://arxiv.org/abs/1705.07115}.
 
-\bibitem[Leys et~al.(2013)]{leys2013detecting}
-C.~Leys et~al.
-\newblock Detecting outliers: Do not use standard deviation around the mean, use absolute deviation around the median.
-\newblock \emph{Journal of Experimental Social Psychology}, 49\penalty0 (4):\penalty0 764--766, 2013.
+\bibitem[La~Rosa et~al.(2021)La~Rosa, Sothe, Feitosa, de~Almeida, Schimalski, and Oliveira]{la_rosa_multi-task_2021}
+Laura Elena~Cué La~Rosa, Camile Sothe, Raul~Queiroz Feitosa, Cláudia~Maria de~Almeida, Marcos~Benedito Schimalski, and Dario Augusto~Borges Oliveira.
+\newblock Multi-task fully convolutional network for tree species mapping in dense forests using small training hyperspectral data.
+\newblock 2021.
+\newblock \doi{10.48550/ARXIV.2106.00799}.
+\newblock URL \url{https://arxiv.org/abs/2106.00799}.
 
-\bibitem[{LGLN}(2019)]{lgln2019quality}
-{LGLN}.
-\newblock Quality specifications for digital elevation models in lower saxony.
-\newblock Technical report, Landesamt für Geoinformation und Landesvermessung Niedersachsen, 2019.
+\bibitem[{Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)}(2025{\natexlab{a}})]{landesamt_fur_geoinformation_und_landesvermessung_niedersachsen_lgln_digitales_2025}
+{Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)}.
+\newblock Digitales {Oberflächenmodell} ({DOM1}), November 2025{\natexlab{a}}.
+\newblock URL \url{https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-oberfl%C3%A4chenmodell-dom1/about?path=}.
 
-\bibitem[Li et~al.(2020)]{li2020canopy}
-W.~Li et~al.
-\newblock High-resolution mapping of forest canopy height using machine learning by coupling icesat-2 lidar with sentinel-1, sentinel-2 and landsat-8 data.
-\newblock \emph{International Journal of Applied Earth Observation and Geoinformation}, 92:\penalty0 102163, 2020.
+\bibitem[{Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)}(2025{\natexlab{b}})]{landesamt_fur_geoinformation_und_landesvermessung_niedersachsen_lgln_digitales_2025-1}
+{Landesamt für Geoinformation und Landesvermessung Niedersachsen (LGLN)}.
+\newblock Digitales {Geländemodell} ({DGM1}), November 2025{\natexlab{b}}.
+\newblock URL \url{https://ni-lgln-opengeodata.hub.arcgis.com/apps/lgln-opengeodata::digitales-geländemodell-dgm1/about}.
 
-\bibitem[Lin et~al.(2017)Lin, Goyal, Girshick, He, and Doll{\'a}r]{lin2017focal}
-T.-Y. Lin, P.~Goyal, R.~Girshick, K.~He, and P.~Doll{\'a}r.
-\newblock Focal loss for dense object detection.
-\newblock In \emph{Proceedings of the IEEE International Conference on Computer Vision (ICCV)}, pages 2980--2988, 2017.
+\bibitem[Lang et~al.(2023)Lang, Jetz, Schindler, and Wegner]{lang_high-resolution_2023}
+Nico Lang, Walter Jetz, Konrad Schindler, and Jan~Dirk Wegner.
+\newblock A high-resolution canopy height model of the {Earth}.
+\newblock \emph{Nature Ecology \& Evolution}, 7\penalty0 (11):\penalty0 1778--1789, November 2023.
+\newblock ISSN 2397-334X.
+\newblock \doi{10.1038/s41559-023-02206-6}.
+\newblock URL \url{https://www.nature.com/articles/s41559-023-02206-6}.
 
-\bibitem[Liu et~al.(2022{\natexlab{a}})]{liu2022autolambda}
-S.~Liu et~al.
-\newblock Auto-lambda: Disentangling dynamic task relationships.
-\newblock \emph{Transactions on Machine Learning Research}, 2022{\natexlab{a}}.
+\bibitem[Li et~al.(2020)Li, Niu, Shang, Qin, Wang, and Chen]{li_high-resolution_2020}
+Wang Li, Zheng Niu, Rong Shang, Yuchu Qin, Li~Wang, and Hanyue Chen.
+\newblock High-resolution mapping of forest canopy height using machine learning by coupling {ICESat}-2 {LiDAR} with {Sentinel}-1, {Sentinel}-2 and {Landsat}-8 data.
+\newblock \emph{International Journal of Applied Earth Observation and Geoinformation}, 92:\penalty0 102163, October 2020.
+\newblock ISSN 1569-8432.
+\newblock \doi{10.1016/j.jag.2020.102163}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/S030324342030026X}.
 
-\bibitem[Liu et~al.(2022{\natexlab{b}})]{liu2022assocsegheight}
-W.~Liu et~al.
-\newblock Associatively segmenting semantics and estimating height from monocular remote-sensing imagery.
-\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 60:\penalty0 1--17, 2022{\natexlab{b}}.
+\bibitem[Lin et~al.(2017)Lin, Goyal, Girshick, He, and Dollár]{lin_focal_2017}
+Tsung-Yi Lin, Priya Goyal, Ross Girshick, Kaiming He, and Piotr Dollár.
+\newblock Focal {Loss} for {Dense} {Object} {Detection}, 2017.
+\newblock URL \url{https://arxiv.org/abs/1708.02002}.
 
-\bibitem[Misra et~al.(2016)Misra, Shrivastava, Gupta, and Hebert]{misra2016crossstitch}
-I.~Misra, A.~Shrivastava, A.~Gupta, and M.~Hebert.
-\newblock Cross-stitch networks for multi-task learning.
-\newblock In \emph{Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition}, pages 3994--4003, 2016.
+\bibitem[Liu et~al.(2022)Liu, Sun, Zhang, Guo, and Fu]{liu_associatively_2022}
+Wenjie Liu, Xian Sun, Wenkai Zhang, Zhi Guo, and Kun Fu.
+\newblock Associatively {Segmenting} {Semantics} and {Estimating} {Height} {From} {Monocular} {Remote}-{Sensing} {Imagery}.
+\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 60:\penalty0 1--17, 2022.
+\newblock ISSN 1558-0644.
+\newblock \doi{10.1109/TGRS.2022.3177796}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/9781388}.
 
-\bibitem[Moreira et~al.(2013)]{moreira2013sar}
-A.~Moreira et~al.
+\bibitem[Lyu et~al.(2025)Lyu, Zhao, Zhou, Li, Zhou, Yao, Cheng, Zhou, and Shi]{lyu_deep_2025}
+Shuchang Lyu, Qi~Zhao, Zheng Zhou, Meng Li, You Zhou, Dingding Yao, Guangliang Cheng, Huiyu Zhou, and Zhenwei Shi.
+\newblock Deep {Learning} {Based} {Domain} {Adaptation} {Methods} in {Remote} {Sensing}: {A} {Comprehensive} {Survey}, October 2025.
+\newblock URL \url{http://arxiv.org/abs/2510.15615}.
+\newblock arXiv:2510.15615.
+
+\bibitem[Mahesh and Hänsch(2023)]{mahesh_deep_2023}
+Ragini~Bal Mahesh and Ronny Hänsch.
+\newblock Deep {Learning} for {Forest} {Canopy} {Height} {Estimation} from {SAR}.
+\newblock In \emph{2023 {IEEE} {International} {Geoscience} and {Remote} {Sensing} {Symposium}, {IGARSS} 2023}, Pasadena, USA, 2023.
+\newblock ISBN 9798350320107.
+\newblock URL \url{https://elib.dlr.de/195398/}.
+
+\bibitem[Mahesh and Hänsch(2024)]{mahesh_forest_2024}
+Ragini~Bal Mahesh and Ronny Hänsch.
+\newblock Forest {Height} {Estimation} {With} {TanDEM}-{X} {SAR} and {InSAR} {Features} {Using} {Deep} {Learning}.
+\newblock \emph{IEEE Geoscience and Remote Sensing Letters}, 21:\penalty0 1--5, 2024.
+\newblock ISSN 1558-0571.
+\newblock \doi{10.1109/LGRS.2024.3474252}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/10705348}.
+
+\bibitem[Mahesh and Hänsch(2025)]{mahesh_better_2025}
+Ragini~Bal Mahesh and Ronny Hänsch.
+\newblock Better {Coherence}, {Better} {Height}: {Fusing} {Physical} {Models} and {Deep} {Learning} for {Forest} {Height} {Estimation} from {Interferometric} {SAR} {Data}.
+\newblock In \emph{2025 {IEEE}/{CVF} {Conference} on {Computer} {Vision} and {Pattern} {Recognition} {Workshops} ({CVPRW})}, pages 2320--2329, June 2025.
+\newblock \doi{10.1109/CVPRW67362.2025.00219}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/11147830}.
+\newblock ISSN: 2160-7516.
+
+\bibitem[Misra et~al.(2016)Misra, Shrivastava, Gupta, and Hebert]{misra_cross-stitch_2016}
+Ishan Misra, Abhinav Shrivastava, Abhinav Gupta, and Martial Hebert.
+\newblock Cross-stitch {Networks} for {Multi}-task {Learning}, 2016.
+\newblock URL \url{https://arxiv.org/abs/1604.03539}.
+
+\bibitem[Moreira et~al.(2013)Moreira, Prats-Iraola, Younis, Krieger, Hajnsek, and Papathanassiou]{moreira_tutorial_2013}
+Alberto Moreira, Pau Prats-Iraola, Marwan Younis, Gerhard Krieger, Irena Hajnsek, and Konstantinos~P. Papathanassiou.
 \newblock A tutorial on synthetic aperture radar.
-\newblock \emph{IEEE Geoscience and Remote Sensing Magazine}, 1\penalty0 (1):\penalty0 6--43, 2013.
+\newblock \emph{IEEE Geoscience and Remote Sensing Magazine}, 1\penalty0 (1):\penalty0 6--43, March 2013.
+\newblock ISSN 2168-6831.
+\newblock \doi{10.1109/MGRS.2013.2248301}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/6504845}.
 
-\bibitem[{NASA Jet Propulsion Laboratory}(2019)]{nasa2019sarhandbook}
-{NASA Jet Propulsion Laboratory}.
-\newblock \emph{NASA SAR Handbook}.
-\newblock NASA Jet Propulsion Laboratory, 2019.
-\newblock Handbook on the use of Synthetic Aperture Radar.
+\bibitem[Mõttus et~al.(2022)Mõttus, Pham, Halme, Molinier, Cu, and Laaksonen]{mottus_taiga_2022}
+Matti Mõttus, Phu Pham, Eelis Halme, Matthieu Molinier, Hai Cu, and Jorma Laaksonen.
+\newblock {TAIGA}: {A} {Novel} {Dataset} for {Multitask} {Learning} of {Continuous} and {Categorical} {Forest} {Variables} {From} {Hyperspectral} {Imagery}.
+\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 60:\penalty0 1--11, 2022.
+\newblock ISSN 1558-0644.
+\newblock \doi{10.1109/TGRS.2022.3141217}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/9673792}.
 
-\bibitem[Nascetti et~al.(2023)]{nascetti2023biomassters}
-A.~Nascetti et~al.
-\newblock Biomassters: A benchmark dataset for forest biomass estimation using multi-modal satellite time-series.
-\newblock \emph{NeurIPS Datasets and Benchmarks Track}, 2023.
+\bibitem[Plotnikov et~al.(2025)Plotnikov, Rudkevich, Illarionova, Tregubova, Shadrin, and Burnaev]{plotnikov_multitask_2025}
+Elisey Plotnikov, Konstantin Rudkevich, Svetlana Illarionova, Polina Tregubova, Dmitrii Shadrin, and Evgeny Burnaev.
+\newblock Multitask {Learning} for {Estimating} {Primary} {Forest} {Characteristics} {Using} {Sentinel}-2 {Data}.
+\newblock In \emph{2025 {IEEE} {International} {Instrumentation} and {Measurement} {Technology} {Conference} ({I2MTC})}, pages 1--6, May 2025.
+\newblock \doi{10.1109/I2MTC62753.2025.11079121}.
+\newblock URL \url{https://ieeexplore.ieee.org/abstract/document/11079121}.
+\newblock ISSN: 2642-2077.
 
-\bibitem[Potapov et~al.(2021)]{potapov2021mapping}
-P.~Potapov et~al.
-\newblock Mapping global forest canopy height through integration of gedi and landsat data.
-\newblock \emph{Remote Sensing of Environment}, 253:\penalty0 112165, 2021.
+\bibitem[Potapov et~al.(2021)Potapov, Li, Hernandez-Serna, Tyukavina, Hansen, Kommareddy, Pickens, Turubanova, Tang, Silva, Armston, Dubayah, Blair, and Hofton]{potapov_mapping_2021}
+Peter Potapov, Xinyuan Li, Andres Hernandez-Serna, Alexandra Tyukavina, Matthew~C. Hansen, Anil Kommareddy, Amy Pickens, Svetlana Turubanova, Hao Tang, Carlos~Edibaldo Silva, John Armston, Ralph Dubayah, J.~Bryan Blair, and Michelle Hofton.
+\newblock Mapping global forest canopy height through integration of {GEDI} and {Landsat} data.
+\newblock \emph{Remote Sensing of Environment}, 253:\penalty0 112165, February 2021.
+\newblock ISSN 00344257.
+\newblock \doi{10.1016/j.rse.2020.112165}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0034425720305381}.
 
-\bibitem[Rodriguez et~al.(2006)Rodriguez, Morris, and Belz]{rodriguez2006srtm}
-E.~Rodriguez, C.~S. Morris, and J.~E. Belz.
-\newblock A global assessment of the srtm performance.
-\newblock \emph{Photogrammetric Engineering \& Remote Sensing}, 72\penalty0 (3):\penalty0 249--260, 2006.
+\bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and Brox]{ronneberger_u-net_2015}
+Olaf Ronneberger, Philipp Fischer, and Thomas Brox.
+\newblock U-{Net}: {Convolutional} {Networks} for {Biomedical} {Image} {Segmentation}, 2015.
+\newblock URL \url{https://arxiv.org/abs/1505.04597}.
 
-\bibitem[Ronneberger et~al.(2015)Ronneberger, Fischer, and Brox]{ronneberger2015unet}
-O.~Ronneberger, P.~Fischer, and T.~Brox.
-\newblock U-net: Convolutional networks for biomedical image segmentation.
-\newblock In \emph{Medical Image Computing and Computer-Assisted Intervention (MICCAI)}, pages 234--241, 2015.
+\bibitem[Shen et~al.(2025)Shen, Xiao, Chen, Du, and Ye]{shen_learning_2025}
+Yu~Shen, Liang Xiao, Jianyu Chen, Qian Du, and Qiaolin Ye.
+\newblock Learning {Cross}-{Task} {Features} {With} {Mamba} for {Remote} {Sensing} {Image} {Multitask} {Prediction}.
+\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 63:\penalty0 1--16, 2025.
+\newblock ISSN 1558-0644.
+\newblock \doi{10.1109/TGRS.2025.3540573}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/10879310}.
 
-\bibitem[Rousseeuw and Croux(1993)]{rousseeuw1993alternatives}
-P.~J. Rousseeuw and C.~Croux.
-\newblock Alternatives to the median absolute deviation.
-\newblock \emph{Journal of the American Statistical Association}, 88\penalty0 (424):\penalty0 1273--1283, 1993.
+\bibitem[Srivastava et~al.(2017)Srivastava, Volpi, and Tuia]{srivastava_joint_2017}
+Shivangi Srivastava, Michele Volpi, and Devis Tuia.
+\newblock Joint height estimation and semantic labeling of monocular aerial images with {CNNS}.
+\newblock In \emph{2017 {IEEE} {International} {Geoscience} and {Remote} {Sensing} {Symposium} ({IGARSS})}, pages 5173--5176, July 2017.
+\newblock \doi{10.1109/IGARSS.2017.8128167}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/8128167}.
+\newblock ISSN: 2153-7003.
 
-\bibitem[Ruder(2017)]{ruder2017overview}
-Sebastian Ruder.
-\newblock An overview of multi-task learning in deep neural networks.
-\newblock \emph{arXiv preprint}, 2017.
+\bibitem[Tao et~al.(2025)Tao, Fu, Yang, and Wang]{tao_multi-task_2025}
+Shilin Tao, Haoyu Fu, Ruiqi Yang, and Leiguang Wang.
+\newblock A {Multi}-{Task} {Learning} {Framework} with {Enhanced} {Cross}-{Level} {Semantic} {Consistency} for {Multi}-{Level} {Land} {Cover} {Classification}.
+\newblock \emph{Remote Sensing}, 17\penalty0 (14):\penalty0 2442, July 2025.
+\newblock ISSN 2072-4292.
+\newblock \doi{10.3390/rs17142442}.
+\newblock URL \url{https://www.mdpi.com/2072-4292/17/14/2442}.
 
-\bibitem[Schwartz et~al.(2023)]{schwartz2023imaestro}
-M.~Schwartz et~al.
-\newblock imaestro: A synthetic dataset for forest monitoring.
-\newblock \emph{Scientific Data}, 10:\penalty0 347, 2023.
+\bibitem[Tebaldini et~al.(2023)Tebaldini, d'Alessandro, Ulander, Bennet, Gustavsson, Coccia, Macedo, Disney, Wilkes, Spors, Schumacher, Hanuš, Novotný, Brede, Bartholomeus, Lau, Van Der~Zee, Herold, Schuettemeyer, and Scipal]{tebaldini_tomosense_2023}
+Stefano Tebaldini, Mauro~Mariotti d'Alessandro, Lars~M.H. Ulander, Patrik Bennet, Anders Gustavsson, Alex Coccia, Karlus Macedo, Mathias Disney, Phil Wilkes, Hans-Joachim Spors, Nico Schumacher, Jan Hanuš, Jan Novotný, Benjamin Brede, Harm Bartholomeus, Alvaro Lau, Jens Van Der~Zee, Martin Herold, Dirk Schuettemeyer, and Klaus Scipal.
+\newblock {TomoSense}: {A} unique {3D} dataset over temperate forest combining multi-frequency mono- and bi-static tomographic {SAR} with terrestrial, {UAV} and airborne lidar, and in-situ forest census.
+\newblock \emph{Remote Sensing of Environment}, 290:\penalty0 113532, May 2023.
+\newblock ISSN 00344257.
+\newblock \doi{10.1016/j.rse.2023.113532}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0034425723000834}.
 
-\bibitem[Schwartz et~al.(2024)]{schwartz2024canopy}
-M.~Schwartz et~al.
-\newblock High-resolution canopy height map in the landes forest (france) based on gedi, sentinel-1, and sentinel-2 data with a deep learning approach.
-\newblock \emph{International Journal of Applied Earth Observation and Geoinformation}, 128:\penalty0 103711, 2024.
+\bibitem[Tolan et~al.(2024)Tolan, Yang, Nosarzewski, Couairon, Vo, Brandt, Spore, Majumdar, Haziza, Vamaraju, Moutakanni, Bojanowski, Johns, White, Tiecke, and Couprie]{tolan_very_2024}
+Jamie Tolan, Hung-I Yang, Benjamin Nosarzewski, Guillaume Couairon, Huy~V. Vo, John Brandt, Justine Spore, Sayantan Majumdar, Daniel Haziza, Janaki Vamaraju, Theo Moutakanni, Piotr Bojanowski, Tracy Johns, Brian White, Tobias Tiecke, and Camille Couprie.
+\newblock Very high resolution canopy height maps from {RGB} imagery using self-supervised vision transformer and convolutional decoder trained on aerial lidar.
+\newblock \emph{Remote Sensing of Environment}, 300:\penalty0 113888, January 2024.
+\newblock ISSN 00344257.
+\newblock \doi{10.1016/j.rse.2023.113888}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S003442572300439X}.
 
-\bibitem[Shen et~al.(2024)]{shen2024rsmtmamba}
-L.~Shen et~al.
-\newblock Rsmtmamba: Remote sensing multitask learning with mamba.
-\newblock \emph{arXiv preprint arXiv:2404.12345}, 2024.
+\bibitem[Torres et~al.(2012)Torres, Snoeij, Geudtner, Bibby, Davidson, Attema, Potin, Rommen, Floury, Brown, Traver, Deghaye, Duesmann, Rosich, Miranda, Bruno, L'Abbate, Croci, Pietropaolo, Huchler, and Rostan]{torres_gmes_2012}
+Ramon Torres, Paul Snoeij, Dirk Geudtner, David Bibby, Malcolm Davidson, Evert Attema, Pierre Potin, BjÖrn Rommen, Nicolas Floury, Mike Brown, Ignacio~Navas Traver, Patrick Deghaye, Berthyl Duesmann, Betlem Rosich, Nuno Miranda, Claudio Bruno, Michelangelo L'Abbate, Renato Croci, Andrea Pietropaolo, Markus Huchler, and Friedhelm Rostan.
+\newblock {GMES} {Sentinel}-1 mission.
+\newblock \emph{Remote Sensing of Environment}, 120:\penalty0 9--24, May 2012.
+\newblock ISSN 00344257.
+\newblock \doi{10.1016/j.rse.2011.05.028}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0034425712000600}.
 
-\bibitem[Small and Schubert(2008)]{small2008guide}
-D.~Small and A.~Schubert.
-\newblock Guide to asar geocoding.
-\newblock \emph{ESA-ESRIN Technical Note RSL-ASAR-GC-AD}, 1:\penalty0 1--36, 2008.
+\bibitem[Troles et~al.(2024)Troles, Schmid, Fan, and Tian]{troles_bamforests_2024}
+Jonas Troles, Ute Schmid, Wen Fan, and Jiaojiao Tian.
+\newblock {BAMFORESTS}: {Bamberg} {Benchmark} {Forest} {Dataset} of {Individual} {Tree} {Crowns} in {Very}-{High}-{Resolution} {UAV} {Images}.
+\newblock \emph{Remote Sensing}, 16\penalty0 (11):\penalty0 1935, May 2024.
+\newblock ISSN 2072-4292.
+\newblock \doi{10.3390/rs16111935}.
+\newblock URL \url{https://www.mdpi.com/2072-4292/16/11/1935}.
 
-\bibitem[Springenberg et~al.(2015)Springenberg, Dosovitskiy, Brox, and Riedmiller]{springenberg2015striving}
-J.~T. Springenberg, A.~Dosovitskiy, T.~Brox, and M.~Riedmiller.
-\newblock Striving for simplicity: The all convolutional net.
-\newblock In \emph{International Conference on Learning Representations (ICLR) Workshop}, 2015.
+\bibitem[Udali et~al.(2021)Udali, Lingua, and Persson]{udali_assessing_2021}
+Alberto Udali, Emanuele Lingua, and Henrik~J. Persson.
+\newblock Assessing {Forest} {Type} and {Tree} {Species} {Classification} {Using} {Sentinel}-1 {C}-{Band} {SAR} {Data} in {Southern} {Sweden}.
+\newblock \emph{Remote Sensing}, 13\penalty0 (16):\penalty0 3237, August 2021.
+\newblock ISSN 2072-4292.
+\newblock \doi{10.3390/rs13163237}.
+\newblock URL \url{https://www.mdpi.com/2072-4292/13/16/3237}.
 
-\bibitem[Srivastava et~al.(2017)Srivastava, Volpi, and Tuia]{srivastava2017jointheight}
-S.~Srivastava, M.~Volpi, and D.~Tuia.
-\newblock Joint height estimation and semantic labeling of monocular aerial images with cnns.
-\newblock In \emph{Proceedings of the IEEE International Geoscience and Remote Sensing Symposium (IGARSS)}, pages 5173--5176, 2017.
+\bibitem[Vandenhende et~al.(2021)Vandenhende, Georgoulis, Van~Gansbeke, Proesmans, Dai, and Van~Gool]{vandenhende_multi-task_2021}
+Simon Vandenhende, Stamatios Georgoulis, Wouter Van~Gansbeke, Marc Proesmans, Dengxin Dai, and Luc Van~Gool.
+\newblock Multi-{Task} {Learning} for {Dense} {Prediction} {Tasks}: {A} {Survey}.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, pages 1--1, 2021.
+\newblock ISSN 0162-8828, 2160-9292, 1939-3539.
+\newblock \doi{10.1109/TPAMI.2021.3054719}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/9336293/}.
 
-\bibitem[Tebaldini et~al.(2023)]{tebaldini2023tomosense}
-S.~Tebaldini et~al.
-\newblock Tomosense: A tomographic sar dataset for forest monitoring.
-\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 61:\penalty0 1--18, 2023.
+\bibitem[Wei et~al.(2024)Wei, Deng, Xiong, Zhang, and Li]{wei_forest_2024}
+Ruyi Wei, Zhichao Deng, Siting Xiong, Bochen Zhang, and Qingquan Li.
+\newblock Forest {Canopy} {Height} {Estimation} based on {InSAR} {Coherence}.
+\newblock In \emph{{IGARSS} 2024 - 2024 {IEEE} {International} {Geoscience} and {Remote} {Sensing} {Symposium}}, pages 5402--5405, July 2024.
+\newblock \doi{10.1109/IGARSS53475.2024.10640495}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/10640495}.
+\newblock ISSN: 2153-7003.
 
-\bibitem[Tolan et~al.(2024{\natexlab{a}})]{tolan2024canopy}
-J.~Tolan et~al.
-\newblock Very high resolution canopy height maps from rgb imagery using self-supervised vision transformer and convolutional decoder trained on aerial lidar.
-\newblock \emph{Remote Sensing of Environment}, 300:\penalty0 113888, 2024{\natexlab{a}}.
+\bibitem[Weinstein et~al.(2021)Weinstein, Marconi, Bohlman, Zare, Singh, Graves, and White]{weinstein_remote_2021}
+Ben~G Weinstein, Sergio Marconi, Stephanie~A Bohlman, Alina Zare, Aditya Singh, Sarah~J Graves, and Ethan~P White.
+\newblock A remote sensing derived data set of 100 million individual tree crowns for the {National} {Ecological} {Observatory} {Network}.
+\newblock \emph{eLife}, 10:\penalty0 e62922, February 2021.
+\newblock ISSN 2050-084X.
+\newblock \doi{10.7554/eLife.62922}.
+\newblock URL \url{https://elifesciences.org/articles/62922}.
 
-\bibitem[Tolan et~al.(2024{\natexlab{b}})]{tolan2024meta}
-J.~Tolan et~al.
-\newblock Very high resolution canopy height maps from rgb imagery using self-supervised vision transformer and convolutional decoder trained on aerial lidar.
-\newblock \emph{Remote Sensing of Environment}, 300:\penalty0 113888, 2024{\natexlab{b}}.
+\bibitem[Wessel et~al.(2018)Wessel, Huber, Wohlfart, Marschalk, Kosmann, and Roth]{wessel_accuracy_2018}
+Birgit Wessel, Martin Huber, Christian Wohlfart, Ursula Marschalk, Detlev Kosmann, and Achim Roth.
+\newblock Accuracy assessment of the global {TanDEM}-{X} {Digital} {Elevation} {Model} with {GPS} data.
+\newblock \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, 139:\penalty0 171--182, May 2018.
+\newblock ISSN 09242716.
+\newblock \doi{10.1016/j.isprsjprs.2018.02.017}.
+\newblock URL \url{https://linkinghub.elsevier.com/retrieve/pii/S0924271618300522}.
 
-\bibitem[Torres et~al.(2012)]{torres2012sentinel}
-R.~Torres et~al.
-\newblock Gmes sentinel-1 mission.
-\newblock \emph{Remote Sensing of Environment}, 120:\penalty0 9--24, 2012.
+\bibitem[Wu et~al.(2025)Wu, Zhu, Gu, Han, Jiang, and Geng]{wu_segcr_2025}
+Shicheng Wu, Jinbiao Zhu, Yanlin Gu, Wenqi Han, Wen Jiang, and Jie Geng.
+\newblock {SegCR}: {A} {Multimodal} and {Multitask} {Complementary} {Fusion} {Network} for {Remote} {Sensing} {Semantic} {Segmentation} and {Cloud} {Removal}.
+\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 63:\penalty0 1--14, 2025.
+\newblock ISSN 1558-0644.
+\newblock \doi{10.1109/TGRS.2025.3603066}.
+\newblock URL \url{https://ieeexplore.ieee.org/document/11142370}.
 
-\bibitem[Torres~de Almeida et~al.(2022)]{torresdealmeida2022canopy}
-D.~R.~A. Torres~de Almeida et~al.
-\newblock Canopy height mapping by sentinel-1 and -2 satellite images, airborne lidar data, and machine learning.
-\newblock \emph{Remote Sensing}, 14\penalty0 (16):\penalty0 4112, 2022.
+\bibitem[Yu et~al.(2020)Yu, Kumar, Gupta, Levine, Hausman, and Finn]{yu_gradient_2020}
+Tianhe Yu, Saurabh Kumar, Abhishek Gupta, Sergey Levine, Karol Hausman, and Chelsea Finn.
+\newblock Gradient {Surgery} for {Multi}-{Task} {Learning}, 2020.
+\newblock URL \url{https://arxiv.org/abs/2001.06782}.
 
-\bibitem[Troles et~al.(2024)]{troles2024bamforest}
-B.~Troles et~al.
-\newblock Bamforest: A uav-based dataset for tree crown segmentation and height estimation.
-\newblock \emph{Remote Sensing}, 16:\penalty0 1234, 2024.
-
-\bibitem[Vandenhende et~al.(2022)]{vandenhende2022mtlsurvey}
-S.~Vandenhende et~al.
-\newblock Multi-task learning for dense prediction tasks: A survey.
-\newblock \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 44\penalty0 (7):\penalty0 3614--3633, 2022.
-
-\bibitem[Veci et~al.(2014)]{veci2014snap}
-L.~Veci et~al.
-\newblock The sentinel-1 toolbox, 2014.
-\newblock Proceedings of the IEEE International Geoscience and Remote Sensing Symposium (IGARSS).
-
-\bibitem[Wang et~al.(2022)]{wang2022canopy}
-J.~Wang et~al.
-\newblock Forest canopy height mapping by synergizing icesat-2, sentinel-1, sentinel-2 and topographic information based on machine learning methods.
-\newblock \emph{Remote Sensing}, 14\penalty0 (2):\penalty0 364, 2022.
-
-\bibitem[Wang et~al.(2024)]{wang2024segcr}
-M.~Wang et~al.
-\newblock Segcr: A multimodal and multitask complementary fusion network for remote sensing semantic segmentation and cloud removal.
-\newblock \emph{IEEE Transactions on Geoscience and Remote Sensing}, 63:\penalty0 1--15, 2024.
-
-\bibitem[Weinstein et~al.(2021)]{weinstein2021remote}
-B.~G. Weinstein et~al.
-\newblock A remote sensing derived data set of 100 million individual tree crowns for the national ecological observatory network.
-\newblock \emph{eLife}, 10:\penalty0 e62922, 2021.
-
-\bibitem[Wessel et~al.(2018)]{wessel2018tandemx}
-B.~Wessel et~al.
-\newblock Accuracy assessment of the global tandem-x digital elevation model with gps data.
-\newblock \emph{ISPRS Journal of Photogrammetry and Remote Sensing}, 139:\penalty0 171--182, 2018.
-
-\bibitem[West et~al.(1997)West, Brown, and Enquist]{west1997general}
-G.~B. West, J.~H. Brown, and B.~J. Enquist.
-\newblock A general model for the origin of allometric scaling laws in biology.
-\newblock \emph{Science}, 276\penalty0 (5309):\penalty0 122--126, 1997.
-
-\bibitem[Yu et~al.(2020)Yu, Kumar, Gupta, et~al.]{yu2020gradient}
-T.~Yu, S.~Kumar, A.~Gupta, et~al.
-\newblock Gradient surgery for multi-task learning.
-\newblock \emph{Advances in Neural Information Processing Systems}, 33:\penalty0 5824--5836, 2020.
-
-\bibitem[Yuan et~al.(2021)]{yuan2021treesatai}
-X.~Yuan et~al.
-\newblock Treesatai benchmark archive: A multi-sensor, multi-label dataset for tree species classification in remote sensing.
-\newblock \emph{Earth System Science Data Discussions}, 2021.
-\newblock In review.
-
-\bibitem[Zanne et~al.(2009)Zanne, Lopez-Gonzalez, Coomes, et~al.]{zanne2009global}
-A.~E. Zanne, G.~Lopez-Gonzalez, D.~A. Coomes, et~al.
-\newblock Global wood density database.
-\newblock \emph{Dryad Digital Repository}, 2009.
-\newblock \doi{10.5061/dryad.234}.
-
-\bibitem[Zhang and Yang(2018)]{zhang2018overview}
-Y.~Zhang and Q.~Yang.
-\newblock An overview of multi-task learning.
-\newblock \emph{National Science Review}, 5\penalty0 (1):\penalty0 30--43, 2018.
-
-\bibitem[Zianis et~al.(2005)]{zianis2005biomass}
-D.~Zianis et~al.
-\newblock Biomass and stem volume equations for tree species in europe.
-\newblock \emph{Silva Fennica Monographs}, 4:\penalty0 1--63, 2005.
+\bibitem[Zanne et~al.(2009)Zanne, Lopez-Gonzalez, Coomes, Ilic, Jansen, Lewis, Miller, Swenson, Wiemann, and Chave]{zanne_data_2009}
+Amy~E. Zanne, G.~Lopez-Gonzalez, David~A. Coomes, Jugo Ilic, Steven Jansen, Simon~L. Lewis, Regis~B. Miller, Nathan~G. Swenson, Michael~C. Wiemann, and Jerome Chave.
+\newblock Data from: {Towards} a worldwide wood economics spectrum, February 2009.
+\newblock URL \url{https://datadryad.org/dataset/doi:10.5061/dryad.234}.
 
 \end{thebibliography}

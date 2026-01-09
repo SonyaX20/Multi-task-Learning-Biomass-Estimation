@@ -172,7 +172,7 @@ The tasks also differ in complexity. Classification makes one prediction per $6\
 
 \subsubsection{Gradient Analysis}
 
-To understand task interactions in the shared encoder, gradient cosine similarity was computed between classification and regression gradients at three encoder depths across training epochs. Gradient cosine similarity has been widely used to analyze task conflicts in multitask learning, where negative values indicate conflicting gradients that can harm optimization \cite{yu2020gradient}. Recent work has further developed this analysis to understand when and where tasks compete for shared parameters \cite{liu2022autolambda,guo2023dynamic}.
+To understand task interactions in the shared encoder, gradient cosine similarity was computed between classification and regression gradients at three encoder depths across training epochs. Gradient cosine similarity has been widely used to analyze task conflicts in multitask learning, where negative values indicate conflicting gradients that can harm optimization \cite{yu_gradient_2020}.
 
 \begin{figure}[htbp]
     \centering
@@ -194,7 +194,7 @@ The primary goal of the subsequent multitask experiments is to investigate wheth
 \subsection{Ablation Study: Alternative Parameter Sharing Strategies}
 \label{subsec:treesat_ablation}
 
-To better understand the baseline multitask architecture, this section compares three parameter sharing strategies: the hard-sharing MultiTaskUNet, Cross-Stitch Networks \cite{misra2016crossstitch}, and Cross-Task Attention.
+To better understand the baseline multitask architecture, this section compares three parameter sharing strategies: the hard-sharing MultiTaskUNet, Cross-Stitch Networks \cite{misra_cross-stitch_2016}, and Cross-Task Attention.
 
 \subsubsection{Qualitative Comparison of Architectures}
 
@@ -219,7 +219,7 @@ The baseline architecture shares all encoder parameters between tasks and uses t
 
 \paragraph{Cross-Stitch Networks}
 
-Cross-stitch networks \cite{misra2016crossstitch} introduce learnable linear combinations between task-specific subnetworks at multiple depths. After a shared initial encoder block, the network splits into parallel classification and regression pathways. At designated layers, cross-stitch units combine activations from both pathways:
+Cross-stitch networks \cite{misra_cross-stitch_2016} introduce learnable linear combinations between task-specific subnetworks at multiple depths. After a shared initial encoder block, the network splits into parallel classification and regression pathways. At designated layers, cross-stitch units combine activations from both pathways:
 \begin{align}
 f_{\text{cls}}^{\text{new}} &= \alpha_{11} f_{\text{cls}} + \alpha_{12} f_{\text{reg}}, \\
 f_{\text{reg}}^{\text{new}} &= \alpha_{21} f_{\text{cls}} + \alpha_{22} f_{\text{reg}},
@@ -259,7 +259,7 @@ Cross-Attention & 5.19\% & 23.18\% & 7.18 & 0.047 \\
 
 The ablation results reveal distinct behavioral patterns for each architecture:
 
-\paragraph{Cross-Stitch Networks} achieve 5.81\% overall accuracy with $R^2$ of 0.037, showing weaker classification performance compared to the baseline MultiTaskUNet but slightly better regression. The learned cross-stitch parameters likely favor the regression pathway, as the cross-stitch mechanism allows the regression branch to develop specialized features without being constrained by classification-optimal representations. This behavior is consistent with the original cross-stitch paper's finding that task-specific representations emerge when the architecture provides freedom to specialize \cite{misra2016crossstitch}. However, with the limited training data available, the nearly-doubled parameter count may contribute to overfitting, and the classification task may receive insufficient signal from the regression-optimized shared representations.
+\paragraph{Cross-Stitch Networks} achieve 5.81\% overall accuracy with $R^2$ of 0.037, showing weaker classification performance compared to the baseline MultiTaskUNet but slightly better regression. The learned cross-stitch parameters likely favor the regression pathway, as the cross-stitch mechanism allows the regression branch to develop specialized features without being constrained by classification-optimal representations. This behavior is consistent with the original cross-stitch paper's finding that task-specific representations emerge when the architecture provides freedom to specialize \cite{misra_cross-stitch_2016}. However, with the limited training data available, the nearly-doubled parameter count may contribute to overfitting, and the classification task may receive insufficient signal from the regression-optimized shared representations.
 
 \paragraph{Cross-Task Attention} shows a similar pattern, achieving 5.19\% overall accuracy and the best regression performance ($R^2 = 0.047$). The attention mechanism at the bottleneck appears to favor regression-relevant information flow. This may occur because the regression task produces spatially-distributed features that provide richer key-value pairs for attention, while the classification task condenses all spatial information through global average pooling immediately after the bottleneck. The attention mechanism may thus learn to prioritize regression-relevant feature interactions simply because they provide more diverse attention targets. Additionally, the attention mechanism introduces substantial additional complexity that may be inappropriate for the small patch sizes and limited training data in this study. With only $6\times 6$ pixel inputs, the attention operates on minimal spatial extent, limiting its ability to learn meaningful long-range dependencies. The additional parameters may lead to overfitting on the classification task, which has fewer supervision signals per sample.
 

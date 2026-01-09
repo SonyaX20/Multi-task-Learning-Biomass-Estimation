@@ -49,6 +49,9 @@
     Summary: fully convolutional framework regressing canopy height from TanDEM‑X InSAR; better CHM accuracy vs physical models.
     Proposes a fully convolutional deep learning framework that regresses forest canopy height from TanDEM-X bistatic InSAR data using coherence and backscatter as inputs.
     Trained against reference canopy height models from airborne LiDAR, the network captures complex relationships between SAR observables and forest structure, reducing RMSE and bias relative to conventional inversion models.
+- ✅[**High-resolution mapping of forest canopy height using machine learning by T coupling ICESat-2 LiDAR with Sentinel-1, Sentinel-2 and Landsat-8 data**](https://www.sciencedirect.com/science/article/pii/S030324342030026X)
+
+- ✅[Forest Canopy Height Mapping by Synergizing ICESat-2, Sentinel-1, Sentinel-2 and Topographic Information Based on Machine Learning Methods](https://www.mdpi.com/2072-4292/14/2/364)
 
 ### 2.3. AGB/AGBD Modelling
 - [**Improving aboveground biomass density mapping of arid and semi-arid vegetation by combining GEDI LiDAR Sentinel-1/2 imagery and field data**](https://www.sciencedirect.com/science/article/pii/S2666017225000100)
