@@ -270,8 +270,8 @@ def reproject_to_template_max(
     # chm[valid_mask & (chm > 41.5983)] = 41.5983
 
     # 2) Apply 20x20 max filter in source (1 m) grid
-    filtered = maximum_filter(chm, size=10, mode="nearest")
-    # filtered = chm
+    # filtered = maximum_filter(chm, size=10, mode="nearest")
+    filtered = chm
 
     # 3) Reproject to template grid with bilinear resampling
     dst_data = np.full((height, width), NODATA_VALUE, dtype=np.float32)

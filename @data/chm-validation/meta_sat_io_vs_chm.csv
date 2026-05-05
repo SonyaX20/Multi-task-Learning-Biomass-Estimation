@@ -1,0 +1,7 @@
+tile_id,pred_file,ref_file,n_valid,rmse,r2,bias
+324465775,/Users/siyux1927/local/thesis0926/@data/chm/324465775.tif,/Users/siyux1927/local/thesis0926/@data/chm-validation/tmp_meta_tiles/Meta_CHM_1m_324465775.tif,999580,9.532863982465996,-0.5016103113069141,4.182073720962804
+325935724,/Users/siyux1927/local/thesis0926/@data/chm/325935724.tif,/Users/siyux1927/local/thesis0926/@data/chm-validation/tmp_meta_tiles/Meta_CHM_1m_325935724.tif,999866,10.267332176702164,-0.7676049784166037,-6.766003519471609
+324025925,/Users/siyux1927/local/thesis0926/@data/chm/324025925.tif,/Users/siyux1927/local/thesis0926/@data/chm-validation/tmp_meta_tiles/Meta_CHM_1m_324025925.tif,998141,6.471297445402689,0.4016625048601046,1.0179030395630477
+326125899,/Users/siyux1927/local/thesis0926/@data/chm/326125899.tif,/Users/siyux1927/local/thesis0926/@data/chm-validation/tmp_meta_tiles/Meta_CHM_1m_326125899.tif,997351,9.424453460849687,-1.1049989845743693,-2.0865393677852633
+325145894,/Users/siyux1927/local/thesis0926/@data/chm/325145894.tif,/Users/siyux1927/local/thesis0926/@data/chm-validation/tmp_meta_tiles/Meta_CHM_1m_325145894.tif,999810,2.609883810455606,0.23093603435660892,0.24067662308963703
+325235826,/Users/siyux1927/local/thesis0926/@data/chm/325235826.tif,/Users/siyux1927/local/thesis0926/@data/chm-validation/tmp_meta_tiles/Meta_CHM_1m_325235826.tif,999785,5.5611208271304085,0.5471174346305694,0.021266181604044868

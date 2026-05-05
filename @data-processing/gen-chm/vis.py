@@ -89,7 +89,7 @@ def vis_dtm_dsm_chm(
             im = axes[row, col].imshow(data_arrays[row], cmap=cmaps[row])
             images.append(im)
 
-        axes[0, col].set_title(os.path.splitext(tile_name)[0], fontsize=9, pad=0.1)
+        axes[0, col].set_title(os.path.splitext(tile_name)[0], fontsize=12, pad=0.1)
         for row in range(3):
             axes[row, col].axis("off")
             if col == 0:
@@ -100,16 +100,18 @@ def vis_dtm_dsm_chm(
                     rotation=90
                 )
             # Add thin colorbar with 5 ticks from min to max
-            vmin = np.nanmin(data_arrays[row])
-            vmax = np.nanmax(data_arrays[row])
+            if row == 2:
+                vmin, vmax = 0.0, 40.0
+            else:
+                vmin = np.nanmin(data_arrays[row])
+                vmax = np.nanmax(data_arrays[row])
             images[row].set_clim(vmin, vmax)
             cbar = fig.colorbar(images[row], ax=axes[row, col], fraction=0.046, pad=0.02)
             ticks = np.linspace(vmin, vmax, 5)
             cbar.set_ticks(ticks)
-            cbar.ax.tick_params(labelsize=8)
+            cbar.ax.tick_params(labelsize=10)
             cbar.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f'{int(x)}'))
 
-    fig.suptitle("LGLN Patch", fontsize=12)
     plt.tight_layout()
     plt.subplots_adjust(hspace=0.02, wspace=0.2, top=0.95)
     plt.savefig(os.path.join(_ensure_output_dir(), "dtm_dsm_chm.png"), dpi=150)
@@ -165,8 +167,7 @@ def vis_chm_lgln_meta(
                     fontsize=15, va="center", ha="right",
                     rotation=90
                 )
-            vmin = np.nanmin(data_arrays[row])
-            vmax = np.nanmax(data_arrays[row])
+            vmin, vmax = 0.0, 40.0
             images[row].set_clim(vmin, vmax)
             cbar = fig.colorbar(images[row], ax=axes[row, col], fraction=0.046, pad=0.02)
             ticks = np.linspace(vmin, vmax, 5)
@@ -274,8 +275,7 @@ def vis_chm_lgln_eth(
                     fontsize=15, va="center", ha="right",
                     rotation=90
                 )
-            vmin = np.nanmin(data_arrays[row])
-            vmax = np.nanmax(data_arrays[row])
+            vmin, vmax = 0.0, 40.0
             images[row].set_clim(vmin, vmax)
             cbar = fig.colorbar(images[row], ax=axes[row, col], fraction=0.046, pad=0.02)
             ticks = np.linspace(vmin, vmax, 5)
@@ -486,8 +486,8 @@ def analyze_stacked_bands(
     print(f"\nHistogram saved to {_ensure_output_dir()}/stacked_band_histograms_{resolution}m.png")
 
 if __name__ == "__main__":
-    # vis_dtm_dsm_chm(on=True, indices=[1, 2, 3, 6])
-    vis_chm_lgln_eth(on=True, indices=[1, 2, 3, 6])
-    vis_chm_lgln_meta(on=True, indices=[1, 2, 3, 6])
+    vis_dtm_dsm_chm(on=True, indices=[1, 2, 3, 6])
+    # vis_chm_lgln_eth(on=True, indices=[1, 2, 3, 6])
+    # vis_chm_lgln_meta(on=True, indices=[1, 2, 3, 6])
     # vis_stacked_s1_chm(on=True, indices=[1, 20, 70], resolution=60)
     # analyze_stacked_bands(on=True, resolution=60)

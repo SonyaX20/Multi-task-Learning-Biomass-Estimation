@@ -5,18 +5,18 @@ For each matching DSM/DTM tile, this script:
 - computes CHM = DSM - DTM, preserving nodata where either input is nodata.
 
 Default locations (relative to repository root):
-- DSM tiles: data/dsm1_tif/<tile_id>.tif
-- DTM tiles: data/dtm1_tif/<tile_id>.tif
-- CHM output: data/chm/<tile_id>.tif
+- DSM tiles: @data/dsm1_tif/<tile_id>.tif
+- DTM tiles: @data/dtm1_tif/<tile_id>.tif
+- CHM output: @data/chm/<tile_id>.tif
 
 Example usage (from repo root):
   python data-processing/gen-chm/gen4_generate_chm.py
   python data-processing/gen-chm/gen4_generate_chm.py --filename 325465699.tif
 
 python data-processing/gen-chm/gen4_generate_chm.py \
-  --dsm_dir data/dsm1_tif \
-  --dtm_dir data/dtm1_tif \
-  --out_dir data/chm \
+  --dsm_dir @data/dsm1_tif \
+  --dtm_dir @data/dtm1_tif \
+  --out_dir @data/chm \
   --max_iter 5 \
   --nodata -9999
 """
@@ -166,17 +166,17 @@ def main() -> None:
     )
     parser.add_argument(
         "--dsm_dir",
-        default="data/dsm1_tif",
+        default="@data/dsm1_tif",
         help="Directory containing DSM GeoTIFF tiles (relative to repo root).",
     )
     parser.add_argument(
         "--dtm_dir",
-        default="data/dtm1_tif",
+        default="@data/dtm1_tif",
         help="Directory containing DTM GeoTIFF tiles (relative to repo root).",
     )
     parser.add_argument(
         "--out_dir",
-        default="data/chm_standard",
+        default="@data/chm_standard",
         help="Output directory for CHM tiles (relative to repo root).",
     )
     parser.add_argument(

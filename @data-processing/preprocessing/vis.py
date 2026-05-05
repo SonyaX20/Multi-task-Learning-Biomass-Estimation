@@ -138,10 +138,12 @@ def vis_sample_grid(
                 )
 
             # Per-image colorbar with ~5 ticks
-            vmin = float(np.nanmin(band))
-            vmax = float(np.nanmax(band))
-            if not np.isfinite(vmin) or not np.isfinite(vmax):
-                vmin, vmax = 0.0, 1.0
+            if col in (0, 1):
+                vmin, vmax = -18.0, 10.0
+            elif col == 2:
+                vmin, vmax = 0.1, 1.0
+            else:
+                vmin, vmax = 14.0, 30.0
             im.set_clim(vmin, vmax)
             
             cbar = fig.colorbar(im, ax=ax, fraction=0.046, pad=0.02)
@@ -326,7 +328,7 @@ def main() -> None:
 
     resolution = 60
     vis_sample_grid(on=True, resolution=resolution)
-    vis_histograms(on=True, resolution=resolution)
+    # vis_histograms(on=True, resolution=resolution)
     # vis_class_distribution(on=True, resolution=resolution)
 
 

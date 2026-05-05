@@ -1,0 +1,41 @@
+# macOS                                                                     
+.DS_Store                                                                 
+.obsidian/
+
+# Large data files
+*.tif
+*.tiff                                                                      
+*.aux.xml
+                                                                            
+# Intermediate task folders                                               
+task_*/
+things/
+zzzzz/                                                                      
+treesat_benchmark/
+plots/                                                                      
+                                                                        
+# Thesis writing (用@thesis替代)
+@thesis-writing/
+
+# HuggingFace upload scripts (dataset hosted separately)
+hf_upload/
+                                                                            
+# Python                                                                  
+__pycache__/
+*.pyc
+*.egg-info/                                                                 
+
+# Jupyter checkpoints                                                       
+.ipynb_checkpoints/                                                       
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.fls                                                                       
+*.out
+*.toc                                                                       
+*.synctex.gz                                                              
+*.synctex(busy)
+*.bbl
+*.blg                                                                       
+*.fdb_latexmk
